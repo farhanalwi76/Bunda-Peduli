@@ -31,7 +31,7 @@
                             <li>
                                 <a href="/dashboard" class="nav-link">
                                     <i data-feather="home"></i>
-                                    <span class="badge bg-success rounded-pill float-end">9+</span>
+                                    <!-- <span class="badge bg-success rounded-pill float-end">9+</span> -->
                                     <span> Dashboard </span>
                                 </a>
                             </li>
