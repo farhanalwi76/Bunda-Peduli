@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\MahasiswaController;
@@ -11,52 +12,70 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/dashboard', [AdminController::class, 'index']);
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
+    Route::prefix('/dashboard')->group(function () {
+        Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+    
+        // Prodi
+        Route::prefix('/prodi')->group(function () {
+            Route::get('/',
+            [ProdiController::class, 'index']);
+            Route::get('/create', 
+            [ProdiController::class, 'create']);
+            Route::post('/store',
+            [ProdiController::class, 'store']);
+            Route::get('show/{id}', [ProdiController::class, 'show']);
+            Route::get('/edit/{id}', [ProdiController::class, 'edit']);
+            Route::put('update/{id}', [ProdiController::class, 'update']);
+            Route::delete('destroy/{id}', [ProdiController::class, 'destroy']);
+        });
+    
+        // Dosen
+        Route::prefix('/dosen')->group(function () {
+            Route::get('/',
+            [DosenController::class, 'index']);
+            Route::get('/create',
+            [DosenController::class, 'create']);
+            Route::post('/store',
+            [DosenController::class, 'store']);
+            Route::get('/show/{nidn}', [DosenController::class, 'show']);
+            Route::get('/edit/{nidn}', [DosenController::class, 'edit']);
+            Route::put('/update/{nidn}', [DosenController::class, 'update']);
+            Route::delete('/destroy/{nidn}', [DosenController::class, 'destroy']);
+        });
+    
+        // Mahasiswa
+        Route::prefix('/mahasiswa')->group(function () {
+            Route::get('/',
+            [MahasiswaController::class, 'index']);
+            Route::get('/create', [MahasiswaController::class, 'create']);
+            Route::post('/store', [MahasiswaController::class, 'store']);
+            Route::get('/show/{nim}', [MahasiswaController::class, 'show']);
+            Route::get('/edit/{nim}', [MahasiswaController::class, 'edit']);
+            Route::put('/update/{nim}', [MahasiswaController::class, 'update']);
+            Route::delete('/destroy/{nim}', [MahasiswaController::class, 'destroy']);
+        });
+    
+        // Rombel
+        Route::prefix('/rombel')->group(function () {
+            Route::get('/',
+            [RombelController::class, 'index']);
+            Route::get('/create', [RombelController::class, 'create']);
+            Route::post('/store', [RombelController::class, 'store']);
+            Route::get('show/{id}', [RombelController::class, 'show']);
+            Route::get('/edit/{id}', [RombelController::class, 'edit']);
+            Route::put('/update/{id}', [RombelController::class, 'update']);
+            Route::delete('/destroy/{id}', [RombelController::class, 'destroy']);
+    });
+    });
+});    
 
-Route::get('/dashboard/prodi', [ProdiController::class, 'index']);
-Route::get('/dashboard/dosen', [DosenController::class, 'index']);
-Route::get('/dashboard/mahasiswa', [MahasiswaController::class, 'index']);
-Route::get('/dashboard/rombel', [RombelController::class, 'index']);
-
-// Create
-Route::get('/dashboard/prodi/create', [ProdiController::class, 'create']);
-Route::get('/dashboard/dosen/create', [DosenController::class, 'create']);
-Route::get('/dashboard/mahasiswa/create', [MahasiswaController::class, 'create']);
-Route::get('/dashboard/rombel/create', [RombelController::class, 'create']);
-
-//Store
-Route::post('/dashboard/prodi/store', [ProdiController::class, 'store']);
-Route::post('/dashboard/dosen/store', [DosenController::class, 'store']);
-Route::post('/dashboard/mahasiswa/store', [MahasiswaController::class, 'store']);
-Route::post('/dashboard/rombel/store', [RombelController::class, 'store']);
-
-//show
-Route::get('/dashboard/prodi/show/{id}', [ProdiController::class, 'show']);
-Route::get('/dashboard/dosen/show/{nidn}', [DosenController::class, 'show']);
-Route::get('/dashboard/mahasiswa/show/{nim}', [MahasiswaController::class, 'show']);
-Route::get('/dashboard/rombel/show/{id}', [RombelController::class, 'show']);
-
-//edit
-Route::get('/dashboard/prodi/edit/{id}', [ProdiController::class, 'edit']);
-Route::get('/dashboard/dosen/edit/{nidn}', [DosenController::class, 'edit']);
-Route::get('/dashboard/mahasiswa/edit/{nim}', [MahasiswaController::class, 'edit']);
-Route::get('/dashboard/rombel/edit/{id}', [RombelController::class, 'edit']);
-
-//update
-Route::put('/dashboard/prodi/update/{id}', [ProdiController::class, 'update']);
-Route::put('/dashboard/dosen/update/{nidn}', [DosenController::class, 'update']);
-Route::put('/dashboard/mahasiswa/update/{nim}', [MahasiswaController::class, 'update']);
-Route::put('/dashboard/rombel/update/{id}', [RombelController::class, 'update']);
-
-
-//destroy
-Route::delete('/dashboard/prodi/destroy/{id}', [ProdiController::class, 'destroy']);
-Route::delete('/dashboard/dosen/destroy/{nidn}', [DosenController::class, 'destroy']);
-Route::delete('/dashboard/mahasiswa/destroy/{nim}', [MahasiswaController::class, 'destroy']);
-Route::delete('/dashboard/rombel/destroy/{id}', [RombelController::class, 'destroy']);
-
-
+require __DIR__.'/auth.php';

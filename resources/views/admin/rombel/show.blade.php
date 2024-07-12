@@ -13,20 +13,19 @@
     </x-slot>
     <x-slot name="main_content">
         <table class="table table-bordered text-center">
-            <tr class="table-success"></tr>
-                <th>NIDN</th>
+            <tr class="table-primary">
+                <th>Id</th>
                 <th>Kode</th>
                 <th>Tahun Masuk</th>
                 <th>Dosen PA</th>
-                
             </tr>
 
-        <tr></tr>
-            <td>{{ $rombongan_belajar->id }}</td>
-            <td>{{ $rombongan_belajar->kode }}</td>
-            <td>{{ $rombongan_belajar->thn_masuk }}</td>
-            <td>{{ $rombongan_belajar->dosen_pa }}</td>
-        </tr>
+            <tr>
+                <td>{{ $rombongan_belajar->id }}</td>
+                <td>{{ $rombongan_belajar->kode }}</td>
+                <td>{{ $rombongan_belajar->thn_masuk }}</td>
+                <td>{{ $rombongan_belajar->dosen_pa }}</td>
+            </tr>
         </table>
     </x-slot>
     <x-slot name="footer">

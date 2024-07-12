@@ -8,18 +8,18 @@
                         <div class="logo-box">
                             <a href="/dashboard" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('admin/dist/assets/images/logo-sm.png') }}" alt="" height="22">
+                                    <img src="{{ asset('admin/dist/assets/images/404-sm.png') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{ asset('admin/dist/assets/images/logo-light.png') }}" alt="" height="24">
+                                    <img src="{{ asset('admin/dist/assets/images/404.png') }}" alt="" height="50">
                                 </span>
                             </a>
                             <a href="/dashboard" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('admin/dist/assets/images/logo-sm.png') }}" alt="" height="22">
+                                    <img src="{{ asset('admin/dist/assets/images/404-sm.png') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{ asset('admin/dist/assets/images/logo-dark.png') }}" alt="" height="24">
+                                    <img src="{{ asset('admin/dist/assets/images/404.png') }}" alt="" height="50">
                                 </span>
                             </a>
                         </div>

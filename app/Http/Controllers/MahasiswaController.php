@@ -8,7 +8,6 @@ use App\Models\Rombel;
 use App\Models\Prodi;
 use App\Models\Dosen;
 
-
 class MahasiswaController extends Controller
 {
     /**
@@ -24,11 +23,12 @@ class MahasiswaController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {   
+    {
         $rombongan_belajar=Rombel::all();
         $prodi = Prodi::all();
         return view('admin.mahasiswa.create',compact('prodi','rombongan_belajar'));
         return view('admin.mahasiswa.create');
+
     }
 
     /**
@@ -47,6 +47,7 @@ class MahasiswaController extends Controller
         ]);
         Mahasiswa::create($validate);
         return redirect('dashboard/mahasiswa');
+
     }
 
     /**
@@ -56,7 +57,6 @@ class MahasiswaController extends Controller
     {
         $mahasiswa = Mahasiswa::find($nim);
         return view('admin.mahasiswa.show', compact('mahasiswa'));
-
     }
 
     /**
@@ -71,8 +71,8 @@ class MahasiswaController extends Controller
         $prodi = Prodi::all();
         $rombongan_belajar = Rombel::all();
         return view('admin.mahasiswa.edit', compact('mahasiswa','prodi','rombongan_belajar'));
-
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -92,6 +92,7 @@ class MahasiswaController extends Controller
         $mahasiswa = Mahasiswa::find($nim);
         $mahasiswa->update($validate);
         return redirect('dashboard/mahasiswa');
+
     }
 
     /**
@@ -101,6 +102,6 @@ class MahasiswaController extends Controller
     {
         $mahasiswa = Mahasiswa::find($nim);
         $mahasiswa->delete();
-        return redirect('dashboard/mahasiswa')->with('pesan', 'Data Berhasil');
+        return redirect('dashboard/mahasiswa')->with('pesan', 'Data Berhasil dihapus');
     }
 }

@@ -12,26 +12,24 @@
     <x-slot name="title">
     </x-slot>
     <x-slot name="main_content">
-       
         <table class="table table-bordered text-center">
-            <tr class="table-success">
+            <tr class="table-primary">
                 <th>NIDN</th>
                 <th>Nama</th>
-                <th>tmp_lahir</th>
-                <th>tgl_lahir</th>
+                <th>Tempat Lahir</th>
+                <th>Tanggal Lahir</th>
                 <th>Gender</th>
-                <th>Prodi id</th>
+                <th>Prodi</th>
             </tr>
            
-        <tr>
-            <td>{{ $dosen->nidn }}</td>
-            <td>{{ $dosen->nama }}</td>
-            <td>{{ $dosen->tmp_lahir }}</td>
-            <td>{{ $dosen->tgl_lahir }}</td>
-            <td>{{ $dosen->jk }}</td>
-            <td>{{ $dosen->prodi_id }}</td>
-           
-        </tr>
+            <tr>
+                <td>{{ $dosen->nidn }}</td>
+                <td>{{ $dosen->nama }}</td>
+                <td>{{ $dosen->tmp_lahir }}</td>
+                <td>{{ $dosen->tgl_lahir }}</td>
+                <td>{{ $dosen->jk }}</td>
+                <td>{{ $dosen->prodi_id }}</td>
+            </tr>
         </table>
     </x-slot>
     <x-slot name="footer">

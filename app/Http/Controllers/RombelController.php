@@ -43,7 +43,7 @@ class RombelController extends Controller
         ]);
 
         Rombel::create($validate);
-        return redirect('dashboard/rombel');
+        return redirect('dashboard/rombel')->with('pesan', 'Data Berhasil Di Tambahkan');
     }
 
     /**
@@ -84,7 +84,7 @@ class RombelController extends Controller
         ]);
         $rombongan_belajar = Rombel::find($id);
         $rombongan_belajar->update($validate);
-        return redirect('dashboard/rombel')->with('pesan', 'Data Berhasil');
+        return redirect('dashboard/rombel')->with('pesan', 'Data Berhasil Diperbarui');
     }
 
     /**
@@ -92,6 +92,14 @@ class RombelController extends Controller
      */
     public function destroy(string $id)
     {
+        // Cek apakah ada mahasiswa yang masih menggunakan prodi ini
+        $mahasiswaCount = Mahasiswa::where('prodi_id', $id)->count();
+
+        if ($mahasiswaCount > 0) {
+            return redirect()->back()->with('error', 'Tidak bisa menghapus Rombel karena masih digunakan oleh mahasiswa.');
+        }
+
+        // Jika tidak ada, maka hapus prodi
         Rombel::find($id)->delete();
         return redirect('dashboard/rombel')->with('pesan', 'Data Berhasil');
     }

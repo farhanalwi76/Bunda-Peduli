@@ -13,27 +13,25 @@
     </x-slot>
     <x-slot name="main_content">
         <table class="table table-bordered text-center">
-            <tr class="table-success">
+            <tr class="table-primary">
                 <th>Nim</th>
                 <th>Nama</th>
-                <th>tmp_lahir</th>
-                <th>tgl_lahir</th>
+                <th>Tempat Lahir</th>
+                <th>Tanggal Lahir</th>
                 <th>IPK</th>
-                <th>Rombel id</th>
-                <th>Prodi id</th>
+                <th>Rombel</th>
+                <th>Prodi</th>
             </tr>
            
-        <tr>
-            <td>{{ $mahasiswa->nim }}</td>
-            <td>{{ $mahasiswa->nama }}</td>
-            <td>{{ $mahasiswa->tmp_lahir }}</td>
-            <td>{{ $mahasiswa->tgl_lahir }}</td>
-            <td>{{ $mahasiswa->ipk }}</td>
-            <td>{{ $mahasiswa->rombel_id }}</td>
-            <td>{{ $mahasiswa->prodi_id }}</td>
-            
-        </tr>
-        
+            <tr>
+                <td>{{ $mahasiswa->nim }}</td>
+                <td>{{ $mahasiswa->nama }}</td>
+                <td>{{ $mahasiswa->tmp_lahir }}</td>
+                <td>{{ $mahasiswa->tgl_lahir }}</td>
+                <td>{{ $mahasiswa->ipk }}</td>
+                <td>{{ $mahasiswa->rombel_id }}</td>
+                <td>{{ $mahasiswa->prodi_id }}</td>
+            </tr>
         </table>
     </x-slot>
     <x-slot name="footer">

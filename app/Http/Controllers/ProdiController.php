@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\prodi;
+use App\Models\Prodi;
 
 class ProdiController extends Controller
 {
@@ -12,7 +12,7 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        $prodi = prodi::all();
+        $prodi = Prodi::all();
         return view('admin.prodi.index', compact('prodi'));
     }
 
@@ -32,15 +32,10 @@ class ProdiController extends Controller
         $validate = $request->validate([
             'kode' => 'required|string',
             'nama' => 'required|string'
-            
-
-            
-
         ]);
 
         prodi::create($validate);
-        return redirect('dashboard/prodi');
-
+        return redirect('dashboard/prodi')->with('pesan', 'Data Berhasil Di Tambahkan');
     }
 
     /**
@@ -73,7 +68,7 @@ class ProdiController extends Controller
 
         $prodi = prodi::find($id);
         $prodi->update($validate);
-        return redirect('dashboard/prodi')->with('pesan', 'Data Berhasil');
+        return redirect('dashboard/prodi')->with('pesan', 'Data Berhasil Diperbarui');
     }
 
     /**
@@ -84,7 +79,6 @@ class ProdiController extends Controller
         $prodi = prodi::find($id);
         $prodi->delete();
         
-        return redirect('dashboard/prodi')->with('pesan', 'Data Berhasil');
-
+        return redirect('dashboard/prodi')->with('pesan', 'Data Berhasil Dihapus');
     }
 }

@@ -13,16 +13,17 @@
     </x-slot>
     <x-slot name="main_content">
         <table class="table table-bordered text-center">
-            <tr class="table-success">
+            <tr class="table-primary">
                 <th>Id</th>
                 <th>Kode</th>
                 <th>Nama</th>
             </tr> 
-        <tr>
-            <td>{{ $prodi->id }}</td>
-            <td>{{ $prodi->kode }}</td>
-            <td>{{ $prodi->nama }}</td>
-        </tr>
+            
+            <tr>
+                <td>{{ $prodi->id }}</td>
+                <td>{{ $prodi->kode }}</td>
+                <td>{{ $prodi->nama }}</td>
+            </tr>
         </table>
     </x-slot>
     <x-slot name="footer">

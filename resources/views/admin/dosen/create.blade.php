@@ -15,38 +15,33 @@
         <form class="forms-sample" action="{{ url('dashboard/dosen/store') }}" method="POST">
             @csrf
             <div class="form-group row">
-                <label for="nidn" class="col-sm-4 col-form-label">Nidn</label>
+                <label for="nidn" class="col-sm-4 col-form-label mb-3">NIDN</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="nidn" name="nidn"
-                        placeholder="Masukkan NIDN">
+                    <input type="text" class="form-control" id="nidn" name="nidn" placeholder="Masukkan NIDN">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="nama" class="col-sm-4 col-form-label">Nama</label>
+                <label for="nama" class="col-sm-4 col-form-label mb-3">Nama</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="nama" name="nama"
-                        placeholder="Masukkan Nama Lengkap">
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Lengkap">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="tmp_lahir" class="col-sm-4 col-form-label">Tempat Lahir</label>
+                <label for="tmp_lahir" class="col-sm-4 col-form-label mb-3">Tempat Lahir</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tmp_lahir" name="tmp_lahir"
-                        placeholder="Masukkan Tempat Lahir">
+                    <input type="text" class="form-control" id="tmp_lahir" name="tmp_lahir" placeholder="Masukkan Tempat Lahir">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="tgl_lahir" class="col-sm-4 col-form-label">Tanggal Lahir</label>
+                <label for="tgl_lahir" class="col-sm-4 col-form-label mb-3">Tanggal Lahir</label>
                 <div class="col-sm-8">
-                    <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir"
-                        placeholder="Masukkan Tanggal Lahir">
+                    <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" placeholder="Masukkan Tanggal Lahir">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="jk" class="col-sm-4 col-form-label">Jenis kelamin</label>
+                <label for="jk" class="col-sm-4 col-form-label mb-3">Jenis Kelamin</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="jk" name="jk"
-                        placeholder="Masukkan Jenis Kelamin L/P">
+                    <input type="text" class="form-control" id="jk" name="jk" placeholder="Masukkan Jenis Kelamin L/P">
                 </div>
             </div>
             <div class="form-group row">
@@ -62,7 +57,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-sm-4"></div>
-                <div class="col-sm-8">
+                <div class="col-sm-8 mt-3">
                     <button type="submit" class="btn btn-primary">Simpan</button>
                     <button type="reset" class="btn btn-warning">Reset</button>
                 </div>

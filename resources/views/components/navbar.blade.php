@@ -43,58 +43,44 @@
                                                 <img src="{{ asset('admin/dist/assets/images/users/user-12.jpg') }}" class="img-fluid rounded-circle" alt="" />
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <p class="notify-details">Carl Steadham</p>
+                                                <p class="notify-details">Ahmad Fauzi</p>
+                                                <small class="text-muted">15 min ago</small>
+                                            </div>
+                                            <p class="mb-0 user-msg">
+                                                <small class="fs-14">Pengingat <span class="text-reset">"Anda memiliki pesan baru dari mahasiswa bimbingan Anda, Ahmad. Silakan periksa kotak masuk Anda untuk membaca pesan tersebut dan memberikan tanggapan. Pastikan Anda merespon sebelum tanggal 20 Juli 2024 untuk memastikan proses bimbingan berjalan lancar. Terima kasih."</span></small>
+                                            </p>
+                                        </a>
+                                        <!-- Item End -->
+
+                                          <!-- item-->
+                                          <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary active">
+                                            <div class="notify-icon">
+                                                <img src="{{ asset('admin/dist/assets/images/users/user-14.jpg') }}" class="img-fluid rounded-circle" alt="" />
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <p class="notify-details">Siti Nurhaliza</p>
+                                                <small class="text-muted">10 min ago</small>
+                                            </div>
+                                            <p class="mb-0 user-msg">
+                                                <small class="fs-14">Pengingat <span class="text-reset">"Anda memiliki jadwal bimbingan dengan mahasiswa, Siti Nurhaliza, pada tanggal 15 Juli 2024 pukul 10:00 WIB. Mohon pastikan Anda hadir tepat waktu untuk membantu kelancaran proses bimbingan akademik."</span></small>
+                                            </p>
+                                        </a>
+                                        <!-- Item End -->
+
+                                          <!-- item-->
+                                          <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary active">
+                                            <div class="notify-icon">
+                                                <img src="{{ asset('admin/dist/assets/images/users/user-13.jpg') }}" class="img-fluid rounded-circle" alt="" />
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <p class="notify-details">Budi Santoso</p>
                                                 <small class="text-muted">5 min ago</small>
                                             </div>
                                             <p class="mb-0 user-msg">
-                                                <small class="fs-14">Completed <span class="text-reset">Improve workflow in Figma</span></small>
+                                                <small class="fs-14">Completed <span class="text-reset">"Mahasiswa bimbingan Anda, Budi Santoso, telah mengunggah laporan tugas akhir untuk direview. Silakan periksa dan berikan feedback melalui portal bimbingan sebelum tanggal 25 Juli 2024 untuk mendukung kemajuan akademik mahasiswa."</span></small>
                                             </p>
                                         </a>
-        
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
-                                            <div class="notify-icon">
-                                                <img src="{{ asset('admin/dist/assets/images/users/user-2.jpg') }}" class="img-fluid rounded-circle" alt="" />
-                                            </div>
-                                            <div class="notify-content">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <p class="notify-details">Olivia McGuire</p>
-                                                    <small class="text-muted">1 min ago</small>
-                                                </div>
-                                                <p class="mb-1 user-msg">
-                                                    <small class="fs-14">Added file to <span class="text-reset text-truncate">Create dark mode for our iOS</span></small>
-                                                </p>
-
-                                                <div class="d-flex mt-2 align-items-center">
-                                                    <div class="notify-sub-icon">
-                                                        <i class="mdi mdi-download-box text-dark"></i>
-                                                    </div>
-
-                                                    <div>
-                                                        <p class="notify-details mb-0">dark-themes.zip</p>
-                                                        <small class="text-muted">2.4 MB</small>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </a>
-        
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
-                                            <div class="notify-icon">
-                                                <img src="{{ asset('admin/dist/assets/images/users/user-3.jpg') }}" class="img-fluid rounded-circle" alt="" /> 
-                                            </div>
-                                            <div class="notify-content">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <p class="notify-details">Travis Williams</p>
-                                                    <small class="text-muted">7 min ago</small>
-                                                </div>
-                                                <p class="mb-1 user-msg">
-                                                    <small class="fs-14">Mentioned you in the <span class="text-reset text-truncate">Rewrite text-button</span></small>
-                                                </p>
-                                                <p class="noti-mentioned p-2 rounded-2 mb-0 mt-2"><span class="text-primary">@Patryk</span> Please make sure that you're....</p>
-                                            </div>
-                                        </a>
+                                        <!-- Item End -->
                                     </div>
         
                                     <!-- All-->
@@ -110,7 +96,7 @@
                                 <a class="nav-link dropdown-toggle nav-user me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                     <img src="{{ asset('admin/dist/assets/images/users/user-11.jpg') }}" alt="user-image" class="rounded-circle">
                                     <span class="pro-user-name ms-1">
-                                        Christian <i class="mdi mdi-chevron-down"></i> 
+                                    {{ Auth::user()->name ?? '' }} <i class="mdi mdi-chevron-down"></i> 
                                     </span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
@@ -119,33 +105,21 @@
                                         <h6 class="text-overflow m-0">Welcome !</h6>
                                     </div>
         
-                                    <!-- item-->
-                                    <a href="pages-profile.html" class="dropdown-item notify-item">
-                                        <i class="mdi mdi-account-circle-outline fs-16 align-middle"></i>
-                                        <span>My Account</span>
-                                    </a>
-        
-                                    <!-- item-->
-                                    <a href="auth-lock-screen.html" class="dropdown-item notify-item">
-                                        <i class="mdi mdi-lock-outline fs-16 align-middle"></i>
-                                        <span>Lock Screen</span>
-                                    </a>
-        
                                     <div class="dropdown-divider"></div>
         
                                     <!-- item-->
-                                    <a href="#" class="dropdown-item notify-item">
+                                    <a href="{{ route('logout') }}" class="dropdown-item notify-item"
+                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                         <i class="mdi mdi-location-exit fs-16 align-middle"></i>
-                                        <span>Logout</span>
+                                        {{ __('Logout') }}
                                     </a>
-        
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                                </form>
                                 </div>
                             </li>
-        
                         </ul>
                     </div>
-
                 </div>
-               
             </div>
             <!-- end Topbar -->

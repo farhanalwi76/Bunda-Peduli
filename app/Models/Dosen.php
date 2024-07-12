@@ -12,5 +12,10 @@ class Dosen extends Model
     protected $table = 'dosen';
     protected $fillable = [ 'nidn', 'nama', 'tmp_lahir', 'tgl_lahir', 'jk', 'prodi_id'];
     protected $primaryKey = 'nidn';
-
+    
+    public function prodi()
+    {
+        return $this->belongsTo(Prodi::class, 'prodi_id', 'id');
+    }
 }
+

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\dosen;
+use App\Models\Dosen;
 use App\Models\Prodi;
+use App\Models\Rombel;
+use App\Models\Mahasiswa;
 class DosenController extends Controller
 {
     /**
@@ -12,7 +14,7 @@ class DosenController extends Controller
      */
     public function index()
     {
-        $dosen = dosen::all();
+        $dosen = dosen::with('prodi')->get();
         return view('admin.dosen.index', compact('dosen'));
     }
     
@@ -24,8 +26,6 @@ class DosenController extends Controller
     {
         $prodi = Prodi::all(); 
         return view('admin.dosen.create',compact('prodi'));
-        return view('admin.dosen.create');
-
     }
 
     /**
@@ -42,7 +42,7 @@ class DosenController extends Controller
             'prodi_id' => 'required|integer'
         ]);
         dosen::create($validate);
-        return redirect('dashboard/dosen');
+        return redirect('dashboard/dosen')->with('pesan', 'Data Berhasil Di Tambahkan');
     }
 
     /**
@@ -60,8 +60,7 @@ class DosenController extends Controller
     public function edit(string $nidn)
     {
         // $dosen = dosen::find($nidn);
-        // $prodi = Prodi::all();
-        // return view('admin.dosen.edit', compact('dosen','prodi'))->with('prodi', $prodi);
+        // return view('admin.dosen.edit', compact('dosen','prodi'))->with('$dosen', $prodi);
 
         $dosen = Dosen::where('nidn', $nidn)->first();
         if (!$dosen) {
@@ -69,7 +68,6 @@ class DosenController extends Controller
         }
         $prodi = Prodi::all();
         return view('admin.dosen.edit', compact('dosen','prodi'));
-    
     }
 
     /**
@@ -85,8 +83,10 @@ class DosenController extends Controller
             'jk' => 'required|string',
             'prodi_id' => 'required|integer',
         ]);
-        dosen::find($nidn)->update($validate);
-        return redirect('dashboard/dosen');
+
+        $dosen = dosen::find($nidn);
+        $dosen->update($validate);
+        return redirect('dashboard/dosen')->with('pesan', 'Data Berhasil Diperbarui');
     }
 
     /**
@@ -94,7 +94,19 @@ class DosenController extends Controller
      */
     public function destroy(string $nidn)
     {
-        dosen::find($nidn)->delete();
-        return redirect('dashboard/dosen');
+        // Cek apakah dosen masih terhubung dengan rombongan_belajar
+        $isLinked = Rombel::where('dosen_pa', $nidn)->exists();
+    
+        if ($isLinked) {
+            return redirect()->back()->with('error', 'Dosen tidak dapat dihapus karena dosen tersebut sedang ditugaskan sebagai dosen PA.');
+        }
+    
+        // Cari dosen berdasarkan nidn
+        $dosen = Dosen::find($nidn);
+    
+        // Jika dosen tidak ditemukan, tampilkan pesan kesalahan
+        if (!$dosen) {
+            return redirect('dashboard/dosen')->with('pesan', 'Dosen berhasil dihapus.');
     }
+}
 }
