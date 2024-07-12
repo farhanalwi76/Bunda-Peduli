@@ -71,7 +71,7 @@
 							<li><a href="#team">Data Dosen</a></li>
 							<li><a href="#video">Video</a></li>
 							<li><a href="#testi">Mahasiswa</a></li>
-							<li><a href="#">Contacts</a></li>
+							<li><a href="{{ route('register') }}">Register</a></li>
 						</ul>
 						<div class="main-btn">
 							<a href="{{ route('login') }}" class="nest-btn">

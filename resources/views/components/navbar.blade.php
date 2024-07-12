@@ -102,7 +102,7 @@
                                 <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
                                     <!-- item-->
                                     <div class="dropdown-header noti-title">
-                                        <h6 class="text-overflow m-0">Welcome !</h6>
+                                        <h6 class="text-overflow m-0"> {{ Auth::user()->role ?? '' }}</h6>
                                     </div>
         
                                     <div class="dropdown-divider"></div>
