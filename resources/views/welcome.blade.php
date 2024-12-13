@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Universitas 404 Jakarta</title>
+	<title>Bunda Peduli</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon -->
@@ -67,10 +67,10 @@
 									</ul>
 								</div> -->
 							</li>
-							<li><a href="#course">Program Studi</a></li>
-							<li><a href="#team">Data Dosen</a></li>
-							<li><a href="#video">Video</a></li>
-							<li><a href="#testi">Mahasiswa</a></li>
+							<li><a href="#course">BMI</a></li>
+							<li><a href="#prodi2">Resep</a></li>
+							<li><a href="#video">Gizi Sehat</a></li>
+							<li><a href="#testi">Konsultasi</a></li>
 							<li><a href="{{ route('register') }}">Register</a></li>
 						</ul>
 						<div class="main-btn">
@@ -131,7 +131,7 @@
 								<h4>Selamat Datang</h4>
 							</div>
 							<div class="slider-main-title">
-								<h1>Universitas 404 Jakarta</h1>
+								<h1>Bunda Peduli</h1>
 							</div>
 							<div class="main-btn slider1">
 								<a href="{{ route('login') }}" class="nest-btn slider1">
@@ -172,10 +172,10 @@
 					<div class="col-lg-6">
 						<div class="slider-content">
 							<div class="slider-sub-title">
-								<h4> Mari Bergabung di Universitas 404 Jakarta  </h4>
+								<h4> Mari Jaga Kesehatan Ankan Dengan Baik  </h4>
 							</div>
 							<div class="slider-main-title">
-								<h1>pendidikan bertemu dengan inovasi.</h1>
+								<h1>Pendidikan bertemu dengan inovasi.</h1>
 							</div>
 						</div>
 					</div>
@@ -194,89 +194,112 @@
 
 		<!-- Start Catagories  Area -->
 	<!--==================================================-->
-	<div class="catagories-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<div class="section-title-shape">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/section-shape.png') }}" alt="">
-						</div>
-						<div class="section-sub-title">
-								<p>Selamat datang di website resmi kampus kami. Kampus kami menyediakan berbagai program studi berkualitas dan tenaga pengajar yang berpengalaman.</p>
-							  </section>
-							  </h4>
-						</div>
-						<div class="prodi" id="course">
-							<h1>Program Studi Teknik Informatika</h1>
-							<br>
-							<p>Program Studi Teknik Informatika fokus pada pengembangan software dan hardware.
-								<p>Visi & Misi: Menghasilkan lulusan yang kompeten dalam bidang teknologi informasi.</p>
-								<p>Prospek Kerja: Software Developer, Network Engineer, Data Scientist, dll</p>
-						  </div>
-						
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="catagories_list owl-carousel">
-					<div class="col-lg-12">
-						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-							<div class="catagories-thumb">
-								<img src="{{ asset('admin/dist/assets/landing/assets/images/catagories/catagories2.png') }}" alt="">
-								<div class="catagories-text">
-									<h4>Visit</h4>
-								</div>
-							</div>
-							<div class="catagories-title">
-								<h4><a href="#">Web Design</a></h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-							<div class="catagories-thumb">
-								<img src="{{ asset('admin/dist/assets/landing/assets/images/catagories/catagories3.png') }}" alt="">
-								<div class="catagories-text">
-									<h4>Visit</h4>
-								</div>
-							</div>
-							<div class="catagories-title">
-								<h4><a href="#">Graphic Design</a></h4>
-							</div>
-						</div>
+	<div class="categories-area mt-5">
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+                    <div class="section-title-shape">
+                        <img src="{{ asset('admin/dist/assets/landing/assets/images/resource/section-shape.png') }}" alt="">
+                    </div>
+                    <div class="section-sub-title" >
+                        <p>Selamat datang di website resmi kami. Bunda peduli menyediakan layanan konsultasi gizi anak</p>
+                    </div>
+                </div>
+
+               <!-- Kalkulator BMI Section -->
+				<div class="prodi mt-5" id="course">
+				<h1 class="text-start mb-1 text-primary">Kalkulator BMI</h1>
+
+				<div class="row mb-4">
+					<!-- Penjelasan Rumus dan Deskripsi di sebelah kiri -->
+					<div class="col-md-6 mt-5">
+						<p class="text-start">
+							Body Mass Index (BMI) adalah alat untuk mengukur proporsi berat badan terhadap tinggi badan. Ini digunakan untuk mengevaluasi apakah berat badan Anda berada dalam kategori yang sehat.
+						</p>
+						<p class="text-start">
+							<strong>Rumus BMI:</strong> <em>BMI = Berat (kg) / (Tinggi (m))²</em>
+						</p>
 					</div>
 
-					<div class="col-lg-12">
-						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-							<div class="catagories-thumb">
-								<img src="{{ asset('admin/dist/assets/landing/assets/images/catagories/catagories5.png') }}" alt="">
-								<div class="catagories-text">
-									<h4>Visit</h4>
-								</div>
-							</div>
-							<div class="catagories-title">
-								<h4><a href="#">Mobile Application</a></h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<div class="catagories-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-							<div class="catagories-thumb">
-								<img src="{{ asset('admin/dist/assets/landing/assets/images/catagories/catagories6.png') }}" alt="">
-								<div class="catagories-text">
-									<h4>Visit</h4>
-								</div>
-							</div>
-							<div class="catagories-title">
-								<h4><a href="#">Development</a></h4>
-							</div>
-						</div>
+					<!-- Tabel Kategori BMI di sebelah kanan -->
+					<div class="col-md-6">
+						<p class="text-center"><strong>Kategori BMI:</strong></p>
+						<table class="table table-bordered text-center">
+							<thead>
+								<tr>
+									<th scope="col">Kategori</th>
+									<th scope="col">Rentang BMI</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Underweight</td>
+									<td>&lt; 18.5</td>
+								</tr>
+								<tr>
+									<td>Normal weight</td>
+									<td>18.5 - 24.9</td>
+								</tr>
+								<tr>
+									<td>Overweight</td>
+									<td>25 - 29.9</td>
+								</tr>
+								<tr>
+									<td>Obesity</td>
+									<td>&ge; 30</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
+
+				<p class="text-start">
+					Masukkan berat badan dan tinggi badan Anda untuk menghitung BMI dan mengetahui kategori kesehatan Anda.
+				</p>
 			</div>
-		</div>
-	</div>
+
+
+        <!-- Kalkulator dan Solusi Section -->
+        <div class="row justify-content-center align-items-center mt-4 mb-5">
+            <div class="col-md-6">
+                <!-- Kalkulator BMI Card -->
+                <div class="card p-4 shadow-lg rounded">
+                    <h2 class="text-center mb-4 text-primary">Hitung BMI</h2>
+                    <form id="bmiForm">
+                        <div class="mb-3">
+                            <label for="weight" class="form-label">Berat (kg):</label>
+                            <input type="number" id="weight" class="form-control" required placeholder="Masukkan berat badan (kg)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="height" class="form-label">Tinggi (cm):</label>
+                            <input type="number" id="height" class="form-control" required placeholder="Masukkan tinggi badan (cm)">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+
+                    <!-- Hasil BMI -->
+                    <div id="bmi-result" class="mt-4" style="display:none;">
+                        <h3 class="text-center">Hasil BMI:</h3>
+                        <p id="bmi-value" class="text-center fs-4 fw-bold text-success"></p>
+                        <p id="bmi-category" class="text-center fs-5 text-info"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solusi & Informasi BMI Card -->
+            <div class="col-md-6">
+                <div class="card p-4 shadow-lg rounded">
+                    <h2 class="text-center mb-4 text-primary">Solusi & Informasi BMI</h2>
+                    <div id="solution" class="text-center">
+                        <p class="fs-5">Masukkan berat dan tinggi badan untuk mengetahui kategori BMI Anda dan solusi yang sesuai.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 	<!--==================================================-->
 	<!-- End Catagories Area -->
 	<!--==================================================-->
@@ -284,245 +307,162 @@
 	<!--==================================================-->
 	<!-- Start Course  Area -->
 	<!--==================================================-->
-	<div class="course-area">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-6 col-md-12">
-					<div class="section-title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<div class="section-title-shape">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/section-shape.png') }}" alt="">
-						</div>
-						<div class="section-sub-title">
-						</div>
-						<div class="prodi">
-							<h2>Program Studi Sistem Informasi</h2>
-							<br>
-							<p>Program Studi Sistem Informasi menggabungkan ilmu komputer dan bisnis.</p>
-							<p>Visi & Misi: Mempersiapkan lulusan yang mampu mengelola sistem informasi dalam organisasi.</p>
-							<p>Prospek Kerja: System Analyst, IT Consultant, Business Analyst, dll.</p>
-						  </div>
+	<div class="course-area mt-5" id="prodi2">
+	<div class="container mt-5">
+		<div class="row align-items-center">
+			<div class="col-lg-6 col-md-12">
+				<div class="section-title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+					<div class="section-title-shape">
+						<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/section-shape.png') }}" alt="">
 					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<ul class="course-menu d-flex justify-content-center wow fadeInUp" data-wow-delay="0.4s"
-						data-wow-duration="1s">
-						<li class=""><a href="#!" data-mixitup-control="" data-filter=".ios" class="">DKV</a>
-						</li>
-						<li class=""><a href="#!" data-mixitup-control="" data-filter=".and" class="">  E- Bisnis</a>
-						</li>
-						<li class=""><a href="#!" data-mixitup-control="" data-filter=".mar" class=""> enterfice</a>
-						</li>
-					</ul>
+					<div class="section-sub-title">
+					</div>
+					<div class="prodi">
+						<h2>Resep Makanan Bergizi</h2>
+						<br>
+						<p>Resep makanan bergizi yang menggabungkan berbagai bahan alami dan penuh dengan vitamin, protein, dan nutrisi lainnya.</p>
+						<p>Visi: Menyajikan makanan sehat untuk mendukung pola hidup yang lebih baik.</p>
+						<p>Prospek: Menjaga kesehatan tubuh dan mendukung kebugaran fisik.</p>
+					</div>
 				</div>
 			</div>
-			<div class="row filters" id="MixItUp7324BF">
-				<div class="col-lg-4 col-md-6 mix ios des">
-					<div class="course-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<div class="course-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/bpr1fo1b6uki8vxbdzwrw/Xencelabs-gives-digital-designers-natural-drawing-feel-with-Pen-Display-24.jpeg?rlkey=9embd8paf6mb67nrw1zx3lhbg&st=hp1ai5ze&dl=0" alt="">
-							<img src="https://dl.dropbox.com/scl/fi/bpr1fo1b6uki8vxbdzwrw/Xencelabs-gives-digital-designers-natural-drawing-feel-with-Pen-Display-24.jpeg?rlkey=9embd8paf6mb67nrw1zx3lhbg&st=hp1ai5ze&dl=0" alt="">
-							<div class="course-icon">
-								<i class="bi bi-heart"></i>
-							</div>
-							<div class="course-rating">
-								<div class="course-admin">
-									<div class="course-shape">
-									</div>
-									<div class="course-shape-title">
-									</div>
-								</div>
-								<div class="course-star">
-								</div>
-							</div>
+			<div class="col-lg-9 col-md-12 mx-auto ">
+				<ul class="course-menu d-flex justify-content-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+					<li class=""><a href="#!" data-mixitup-control="" data-filter=".ios" class="">Resep Sarapan</a></li>
+					<li class=""><a href="#!" data-mixitup-control="" data-filter=".and" class="">Resep Makan Siang</a></li>
+					<li class=""><a href="#!" data-mixitup-control="" data-filter=".mar" class="">Resep Makan Malam</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row filters" id="MixItUp7324BF">
+			<div class="col-lg-4 col-md-6 mix ios des">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="https://via.placeholder.com/400x300" alt="">
+						<img src="https://via.placeholder.com/400x300" alt="">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
 						</div>
-						<div class="course-content">
-							
-							<div class="course-title">
-								<h4><a href="#">Merancang visual yang mampu menggugah emosi dan memperkuat pesan komunikasi.</a></h4>
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="#">Resep Smoothie Buah & Sayuran</a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
+								<span></span>
 							</div>
-							<div class="course-bottom">
-								<div class="course-price">
-									<span></span>
-								</div>
-								<div class="course-cart">
-									
-								</div>
+							<div class="course-cart">
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 mix ios and">
-					<div class="course-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<div class="course-thumb">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/course/course2.png') }}" width="200" alt="">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/course/course2.png') }}" width="200"  alt="">
-							<div class="course-icon">
-								<i class="bi bi-heart"></i>
-							</div>
-							<div class="course-rating">
-								<div class="course-admin">
-									<div class="course-shape">
-									</div>
-									<div class="course-shape-title">
-									</div>
-								</div>
-								<div class="course-star">
-								</div>
-							</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mix ios and">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="https://via.placeholder.com/400x300" width="200" alt="">
+						<img src="https://via.placeholder.com/400x300" width="200"  alt="">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
 						</div>
-						<div class="course-content">
-							<div class="course-meta">
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="#">Salad Sayuran Segar dengan Dressing Lemon</a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
 							</div>
-							<div class="course-title">
-								<h4><a href="#">Mengubah visi kreatif menjadi desain yang dapat dirasakan dan dipahami.</a></h4>
-							</div>
-							<div class="course-bottom">
-								<div class="course-price">
-								</div>
-								<div class="course-cart">
-								</div>
+							<div class="course-cart">
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 mix mar des">
-					<div class="course-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-						<div class="course-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/37tvua2olsa3auv6sb9ka/How-to-Easily-Improve-Your-Business-s-Marketing-Efforts-6-Ways.jpeg?rlkey=vrochurgkfmmut9sxkzrr7c3j&st=ky9zeatn&dl=0" alt="">
-							<img src="https://dl.dropbox.com/scl/fi/37tvua2olsa3auv6sb9ka/How-to-Easily-Improve-Your-Business-s-Marketing-Efforts-6-Ways.jpeg?rlkey=vrochurgkfmmut9sxkzrr7c3j&st=ky9zeatn&dl=0" alt="">
-							<div class="course-icon">
-								<i class="bi bi-heart"></i>
-							</div>
-							<div class="course-rating">
-								<div class="course-admin">
-									<div class="course-shape">
-									</div>
-									<div class="course-shape-title">
-									</div>
-								</div>
-								<div class="course-star">
-								</div>
-							</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mix mar des">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="https://via.placeholder.com/400x300" alt="">
+						<img src="https://via.placeholder.com/400x300" alt="">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
 						</div>
-						<div class="course-content">
-							<div class="course-meta">
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="#">Bubur Oatmeal Pisang Susu Murni</a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
 							</div>
-							<div class="course-title">
-								<h4><a href="#">Beradaptasi dengan baik di berbagai perangkat dan ukuran layar.</a></h4>
-							</div>
-							<div class="course-bottom">
-								<div class="course-price">
-								</div>
-								<div class="course-cart">
-								</div>
+							<div class="course-cart">
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 mix and des">
-					<div class="course-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<div class="course-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/78e0tahczlftbljfpxrdx/Learn-the-Latest-Trends-in-CX-Telco-Payments.jpeg?rlkey=qd3nptq6nubfi58d589klqq4f&st=t26dqla8&dl=0" alt="">
-							<img src="https://dl.dropbox.com/scl/fi/78e0tahczlftbljfpxrdx/Learn-the-Latest-Trends-in-CX-Telco-Payments.jpeg?rlkey=qd3nptq6nubfi58d589klqq4f&st=t26dqla8&dl=0" alt="">
-							<div class="course-icon">
-								<i class="bi bi-heart"></i>
-							</div>
-							<div class="course-rating">
-								<div class="course-admin">
-									<div class="course-shape">
-									</div>
-									<div class="course-shape-title">
-									</div>
-								</div>
-								<div class="course-star">
-									
-								</div>
-							</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mix and des">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="https://via.placeholder.com/400x300" alt="">
+						<img src="https://via.placeholder.com/400x300" alt="">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
 						</div>
-						<div class="course-content">
-							<div class="course-meta">
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="#">Nasi Tim Ayam Sayur Sop dan Tahu </a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
 							</div>
-							<div class="course-title">
-								<h4><a href="#">Membuka pintu bagi bisnis Anda ke pasar global dengan kekuatan internet.
-								</a></h4>
-							</div>
-							<div class="course-bottom">
-								<div class="course-price">
-								</div>
-								<div class="course-cart">
-									
-								</div>
+							<div class="course-cart">
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 mix mar ios">
-					<div class="course-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<div class="course-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/b8ckq8wl022vt3wirkmux/Council-Post_-Four-Tips-To-Make-You-A-Better-Leader.jpeg?rlkey=kgr7l5mixsjk6nyjmhhk7r0wp&st=n8hcjbuo&dl=0" alt="">
-							<img src="https://dl.dropbox.com/scl/fi/b8ckq8wl022vt3wirkmux/Council-Post_-Four-Tips-To-Make-You-A-Better-Leader.jpeg?rlkey=kgr7l5mixsjk6nyjmhhk7r0wp&st=n8hcjbuo&dl=0" alt="">
-							<div class="course-icon">
-								<i class="bi bi-heart"></i>
-							</div>
-							<div class="course-rating">
-								<div class="course-admin">
-									<div class="course-shape">
-									</div>
-									<div class="course-shape-title">
-									</div>
-								</div>
-								<div class="course-star">
-								</div>
-							</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mix mar ios">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="https://via.placeholder.com/400x300" alt="">
+						<img src="https://via.placeholder.com/400x300" alt="">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
 						</div>
-						<div class="course-content">
-							<div class="course-meta">
-
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="#">Ayam Panggang dengan Brokoli</a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
 							</div>
-							<div class="course-title">
-								<h4><a href="#">Menghadirkan solusi kreatif untuk meningkatkan keterlibatan dan efisiensi.</a></h4>
-							</div>
-							<div class="course-bottom">
-								<div class="course-price">
-								</div>
-								<div class="course-cart">
-						
-								</div>
+							<div class="course-cart">
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 mix and mar">
-					<div class="course-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-						<div class="course-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/iow64iaip8eeqwhfnpn1c/Premium-Photo-_-Business-team-discussing-sales-results.jpeg?rlkey=p11b18ii8lqcg58feyimjgwgo&st=olnfhh3v&dl=0" alt="">
-							<img src="https://dl.dropbox.com/scl/fi/iow64iaip8eeqwhfnpn1c/Premium-Photo-_-Business-team-discussing-sales-results.jpeg?rlkey=p11b18ii8lqcg58feyimjgwgo&st=olnfhh3v&dl=0" alt="">
-							<div class="course-icon">
-								<i class="bi bi-heart"></i>
-							</div>
-							<div class="course-rating">
-								<div class="course-admin">
-									<div class="course-shape">
-									</div>
-									<div class="course-shape-title">
-									</div>
-								</div>
-								<div class="course-star">
-								</div>
-							</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mix and mar">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="https://via.placeholder.com/400x300" alt="">
+						<img src="https://via.placeholder.com/400x300" alt="">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
 						</div>
-						<div class="course-content">
-							<div class="course-meta">
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="#">Smoothie Bowl dengan Granola</a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
 							</div>
-							<div class="course-title">
-								<h4><a href="#">Menyediakan solusi terdepan untuk mendukung pertumbuhan dan keberlanjutan bisnis Anda.</a></h4>
-							</div>
-							<div class="course-bottom">
-								<div class="course-price">
-								</div>
-								<div class="course-cart">
-
-								</div>
+							<div class="course-cart">
 							</div>
 						</div>
 					</div>
@@ -530,6 +470,8 @@
 			</div>
 		</div>
 	</div>
+</div>
+
 	<!--==================================================-->
 	<!-- End Course  Area -->
 	<!--==================================================-->
@@ -545,12 +487,11 @@
 						<div class="section-sub-title">
 						</div>
 						<div class="section-main-title">
-							<h2>Program Studi Bisnis Digital</h2>
-							<p>Program Studi Bisnis Digital di Universitas Pakuan bertujuan untuk menghasilkan lulusan yang kompeten dalam mengelola dan mengembangkan bisnis berbasis digital. Kurikulum dirancang untuk memberikan pemahaman mendalam tentang teknologi digital, strategi pemasaran, analisis data, dan manajemen bisnis.</p>
-							<p>VISI & MISI Menjadi program studi unggulan yang menghasilkan lulusan berkualitas tinggi di bidang bisnis digital yang mampu bersaing di tingkat nasional dan internasional</p>
-							<P>Lulusan Program Studi Bisnis Digital memiliki prospek kerja yang luas, Digital Marketing , E-commerce Manager, Business Development Manager, dan Consultant di bidang teknologi dan bisnis digital</P>
-							
-						</div>
+                        	<h2>Bunda Peduli: Layanan Khusus untuk Ibu Hamil dan Balita</h2>
+                        		<p>Bunda Peduli hadir untuk memberikan layanan dukungan, konsultasi, dan bantuan bagi ibu hamil dan balita yang memerlukan bantuan dalam merawat diri dan anak-anak mereka. Kami berkomitmen untuk memberikan informasi, bantuan, dan dukungan yang dapat membantu ibu menjalani masa kehamilan dengan sehat dan menjaga kesejahteraan balita mereka.</p>
+                        		<p>Visi kami adalah untuk membantu ibu hamil dan orang tua balita agar merasakan pengalaman yang sehat dan bahagia dalam merawat anak-anak mereka, dengan dukungan penuh dari tenaga medis yang ahli.</p>
+                        		<P>Layanan kami mencakup konsultasi kesehatan ibu hamil, perawatan balita, edukasi pengasuhan, serta bantuan untuk meringankan tugas sehari-hari ibu yang memerlukan dukungan.</P>
+                    	</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
@@ -566,10 +507,10 @@
 							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/choose1.png') }}" alt="">
 						</div>
 						<div class="choose-content">
-							<span>July 05, 2024</span>
-							<h4>Business Development Manager</h4>
-							<p>Mengidentifikasi peluang bisnis baru, membangun hubungan dengan klien, dan mengembangkan strategi untuk ekspansi pasar dan pertumbuhan bisnis.</p>
-						</div>
+                        	<span>July 05, 2024</span>
+                        	<h4>Konsultasi Kesehatan Ibu Hamil</h4>
+                        	<p>Memberikan informasi dan dukungan tentang kehamilan yang sehat, pemeriksaan rutin, serta tips untuk merawat ibu hamil.</p>
+                    	</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
@@ -578,10 +519,10 @@
 							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/choose2.png') }}" alt="">
 						</div>
 						<div class="choose-content">
-							<span>July 05, 2024</span>
-							<h4>Consultant di bidang teknologi dan bisnis digital</h4>
-							<p>Memberikan konsultasi kepada perusahaan mengenai implementasi teknologi digital</p>
-						</div>
+                        	<span>July 05, 2024</span>
+                        	<h4>Perawatan Balita dan Tumbuh Kembang</h4>
+                        	<p>Mendukung ibu dalam merawat balita dan memastikan perkembangan yang sehat, dengan tips pengasuhan yang berguna bagi anak-anak mereka.</p>
+                    	</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
@@ -591,9 +532,9 @@
 						</div>
 						<div class="choose-content">
 							<span>July 05, 2024</span>
-							<h4>E-commerce Manager</h4>
-							<p>Mengelola dan mengoptimalkan operasional toko online, termasuk strategi pemasaran, pengelolaan inventaris, dan pengalaman pelanggan.</p>
-						</div>
+                        	<h4>Bantuan Pengasuhan dan Keseharian</h4>
+                        	<p>Memberikan dukungan dalam pengasuhan harian, membantu ibu mengelola waktu dan memberikan panduan untuk pengasuhan yang efektif.</p>
+                    	</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
@@ -602,9 +543,9 @@
 							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/choose4.png') }}" alt="">
 						</div>
 						<div class="choose-content">
-							<span>July 05, 2024</span>
-							<h4>Business Development Manager</h4>
-							<p>Mengidentifikasi peluang bisnis baru, membangun hubungan dengan klien, dan mengembangkan strategi.</p>
+						<span>July 05, 2024</span>
+                        <h4>Konsultasi Gizi untuk Ibu dan Balita</h4>
+                        <p>Menyediakan konsultasi gizi untuk memastikan pola makan yang sehat bagi ibu hamil dan balita untuk mendukung kesehatan mereka.</p>
 						</div>
 					</div>
 				</div>
@@ -620,12 +561,12 @@
 		<div class="container">
 			<div class="row align-items-center">
 					<div class="help-main-title wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<h2>UNIVERSITAS 404 JAKARTA</h2>
+						<h2>BUNDA PEDULI</h2>
 					</div>
 					<div class="help-list wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-						<span><i class="bi bi-check"></i> Menyelenggarakan pendidikan yang berkualitas tinggi</span>
-						<span><i class="bi bi-check"></i> Mendorong penelitian inovatif dan aplikatif</span>
-						<span><i class="bi bi-check"></i> Menghasilkan lulusan yang kompeten dan siap bersaing di dunia kerja</span>
+						<span><i class="bi bi-check"></i> Memberikan dukungan bagi ibu hamil dan balita yang membutuhkan bantuan</span>
+                		<span><i class="bi bi-check"></i> Memastikan kesejahteraan ibu dan anak melalui layanan konsultasi</span>
+                		<span><i class="bi bi-check"></i> Memberikan solusi dalam perawatan harian ibu dan balita</span>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
@@ -661,10 +602,10 @@
 							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/section-shape.png') }}" alt="">
 						</div>
 						<div class="section-sub-title">
-							<h4>Data Dosen</h4>
+							<h4>Data Tim Medis</h4>
 						</div>
 						<div class="section-main-title">
-							<h2>Universitas 404 Jakarta</h2>
+							<h2>Bunda Peduli</h2>
 						</div>
 					</div>
 				</div>
@@ -678,7 +619,7 @@
 						<div class="team-content">
 							<div class="team-title">
 								<h4><a href="team-detials.html">Dr. Asep Kuswandi</a></h4>
-								<span>REKTOR</span>
+								<span>Asisten Profesional</span>
 							</div>
 							<div class="team-social-icon">
 								<ul>
@@ -702,7 +643,7 @@
 						<div class="team-content">
 							<div class="team-title">
 								<h4><a href="team-detials.html">Dr. Bambang Supriyadi</a></h4>
-								<span>Kepala Program Studi</span>
+								<span>Dokter Kepala Ibu dan Anak</span>
 							</div>
 							<div class="team-social-icon">
 								<ul>
@@ -726,7 +667,7 @@
 						<div class="team-content">
 							<div class="team-title">
 								<h4><a href="team-detials.html">Dr. Taufik Hidayat</a></h4>
-								<span>Pembingbing Akademik TI</span>
+								<span>Dokter Kesehatan Balita</span>
 							</div>
 							<div class="team-social-icon">
 								<ul>
@@ -750,7 +691,7 @@
 						<div class="team-content">
 							<div class="team-title">
 								<h4><a href="team-detials.html">Dr. Mahdi Wijaya</a></h4>
-								<span>Dosen Pembimbing Skripsi/Tesis/Disertasi</span>
+								<span>Dokter Spesialis Kesehatan Ibu Hamil</span>
 							</div>
 							<div class="team-social-icon">
 								<ul>
@@ -777,94 +718,6 @@
 	<!--==================================================-->
 	<!-- Start Video Gallery Area -->
 	<!--==================================================-->
-	<div class="video-gallery-area" id="video">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title text-center wow fadeInUp animated" data-wow-delay="100ms">
-						<div class="section-title-shape">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/section-shape.png') }}" alt="">
-						</div>
-						<div class="section-sub-title">
-							<h4>LATEST VIDEO GALLERY</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<div class="video-single-box wow fadeInUp animated" data-wow-delay="200ms">
-						<div class="video-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/s0bzbaea91hz5ojf80drs/oxfo.jpg?rlkey=fn1dus4acjwz1ddqufjg5yt7t&st=jj22j8n5&dl=0" alt="">
-							<div class="video-price">
-							</div>
-							<div class="video-content">
-								<div class="video-icon">
-									<a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube"
-										data-autoplay="true" href="https://youtu.be/sao63znb0Tw?si=KitLxBYfyHm9kUrb"><i
-											class="bi bi-play"></i></a>
-								</div>
-								<div class="video-title">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="video-single-box wow fadeInUp animated" data-wow-delay="400ms">
-						<div class="video-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/g7v6r8z78471sqwncec90/IMG-20240706-WA0019.jpg?rlkey=6uv8czpsfe2rdp8vm27ugobq5&st=tcr5sofj&dl=0" alt="">
-							<div class="video-price">
-							</div>
-							<div class="video-content">
-								<div class="video-icon">
-									<a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube"
-										data-autoplay="true" href="https://youtu.be/sao63znb0Tw?si=yP0kGTJgjPXC-57Z"><i
-											class="bi bi-play"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="video-single-box wow fadeInUp animated" data-wow-delay="600ms">
-						<div class="video-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/c3kvtwtg9tzsipnz7n731/IMG-20240706-WA0020.jpg?rlkey=4bvulhb5b2g7nr88mdvdp3m8y&st=j9ad81kd&dl=0" alt="">
-							<div class="video-price">
-							</div>
-							<div class="video-content">
-								<div class="video-icon">
-									<a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube"
-										data-autoplay="true" href="https://youtu.be/iY9pUZEM6co?si=73GIcRoM8TQl60oI"><i
-											class="bi bi-play"></i></a>
-								</div>
-								<div class="video-title">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="video-single-box wow fadeInUp animated" data-wow-delay="800ms">
-						<div class="video-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/bu2djp500h1upw7gtyfwz/IMG-20240706-WA0021.jpg?rlkey=56m878s1e7xfg7a1mixuaxkac&st=ajogusrq&dl=0" alt="">
-							<div class="video-price">
-							</div>
-							<div class="video-content">
-								<div class="video-icon">
-									<a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube"
-										data-autoplay="true" href="https://youtu.be/sWB0ng7KtM4?si=fH_z3cqKEA_Eyy4z"><i
-											class="bi bi-play"></i></a>
-								</div>
-								<div class="video-title">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!--==================================================-->
 	<!-- End Video Gallery Area -->
 	<!--==================================================-->
@@ -1262,6 +1115,68 @@
 
 	<!-- scroll js -->
 	<script src="{{ asset('admin/dist/assets/landing/assets/js/script.js') }}"></script>
+	<script>
+        document.getElementById("bmiForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            // Ambil nilai input berat dan tinggi
+            var weight = parseFloat(document.getElementById("weight").value);
+            var height = parseFloat(document.getElementById("height").value) / 100; // Ubah cm menjadi meter
+            
+            // Cek validitas input
+            if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+                alert("Mohon masukkan nilai yang valid.");
+                return;
+            }
+
+            // Hitung BMI
+            var bmi = weight / (height * height);
+            var category = getBMICategory(bmi);
+            
+            // Tampilkan hasil BMI
+            document.getElementById("bmi-value").innerText = "BMI: " + bmi.toFixed(2);
+            document.getElementById("bmi-category").innerText = "Kategori: " + category;
+            
+            // Tampilkan hasil BMI
+            document.getElementById("bmi-result").style.display = "block";
+
+            // Tampilkan solusi berdasarkan kategori BMI
+            showSolution(category);
+        });
+
+        function getBMICategory(bmi) {
+            if (bmi < 18.5) {
+                return "Kekurangan berat badan";
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                return "Berat badan normal";
+            } else if (bmi >= 25 && bmi < 29.9) {
+                return "Kelebihan berat badan";
+            } else {
+                return "Obesitas";
+            }
+        }
+
+        function showSolution(category) {
+            var solutionText = "";
+
+            switch (category) {
+                case "Kekurangan berat badan":
+                    solutionText = "<p class='fs-6 text-warning'>Cobalah untuk meningkatkan asupan kalori Anda dengan makanan bergizi dan berkonsultasilah dengan ahli gizi.</p>";
+                    break;
+                case "Berat badan normal":
+                    solutionText = "<p class='fs-6 text-success'>Anda berada dalam rentang berat badan yang sehat. Pertahankan gaya hidup sehat dengan diet seimbang dan olahraga teratur.</p>";
+                    break;
+                case "Kelebihan berat badan":
+                    solutionText = "<p class='fs-6 text-warning'>Pertimbangkan untuk mengurangi asupan kalori dan meningkatkan aktivitas fisik. Konsultasikan dengan ahli gizi atau dokter untuk panduan lebih lanjut.</p>";
+                    break;
+                case "Obesitas":
+                    solutionText = "<p class='fs-6 text-danger'>Obesitas dapat meningkatkan risiko berbagai penyakit. Sangat disarankan untuk berkonsultasi dengan dokter atau ahli gizi untuk merencanakan penurunan berat badan yang aman.</p>";
+                    break;
+            }
+
+            document.getElementById("solution").innerHTML = solutionText;
+        }
+    </script>
 
 </body>
 
