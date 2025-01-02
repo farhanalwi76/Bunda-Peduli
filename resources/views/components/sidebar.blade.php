@@ -1,7 +1,8 @@
 @use(App\Models\User)
- <!-- Left Sidebar Start -->
- <div class="app-sidebar-menu">
+<!-- Left Sidebar Start -->
+<div class="app-sidebar-menu">
     <div class="h-100" data-simplebar>
+        
 
         <!--- Sidemenu -->
         <div id="sidebar-menu">
@@ -9,21 +10,22 @@
             <div class="logo-box">
                 <a href="/dashboard" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset('admin/dist/assets/images/404-sm.png') }}" alt="" height="22">
+                        <img src="{{ asset('admin/src/images/kogo bidan.jpg') }}" alt="" style="border-radius: 50%; object-fit: cover; width: 22px; height: 22px;">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('admin/dist/assets/images/404.png') }}" alt="" height="50">
+                        <img src="{{ asset('admin/src/images/kogo bidan.jpg') }}" alt="" style="border-radius: 50%; object-fit: cover; width: 50px; height: 50px;">
                     </span>
                 </a>
                 <a href="/dashboard" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{ asset('admin/dist/assets/images/404-sm.png') }}" alt="" height="22">
+                        <img src="{{ asset('admin/src/images/kogo bidan.jpg') }}" alt="" style="border-radius: 50%; object-fit: cover; width: 22px; height: 22px;">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('admin/dist/assets/images/404.png') }}" alt="" height="50">
+                        <img src="{{ asset('admin/src/images/kogo bidan.jpg') }}" alt="" style="border-radius: 50%; object-fit: cover; width: 50px; height: 50px;">
                     </span>
                 </a>
             </div>
+            
 
             <ul id="side-menu">
 
@@ -31,73 +33,112 @@
 
                 <li>
                     <a href="/dashboard" class="nav-link">
-                        <i data-feather="home"></i>
+                        <i class="fa-solid fa-gauge" style="color: #c81498;"></i>
                         <span> Dashboard </span>
                     </a>
                 </li>
+                
 
                 @auth
-                    @if (Auth::user()->role == User::ROLE_ADMIN)
+                    @if (Auth::user()->role == User::ROLE_ADMIN && Request::is('dashboard*'))
                         <li>
                             <a href="/dashboard/prodi" class="nav-link">
-                                <i data-feather="aperture"></i>
-                                <span> Prodi </span>
+                                <i class="fa-solid fa-user" style="color: #c81498;"></i>
+                                <span> Profile </span>
                             </a>
                         </li>
                         <li>
                             <a href="/dashboard/dosen" class="nav-link">
-                                <i data-feather="globe"></i>
-                                <span> Dosen </span>
+                                <i class="fa-solid fa-calendar-days" style="color: #c81498;"></i>
+                                <span> Daftar Tenaga Medis
+                                </span>
                             </a>
                         </li>
                         <li>
                             <a href="/dashboard/mahasiswa" class="nav-link">
-                                <i data-feather="globe"></i>
-                                <span> Mahasiswa </span>
+                                <i class="fa-solid fa-clipboard" style="color: #c81498;"></i>
+                                <span> Daftar 
+                                    Pengguna </span>
                             </a>
                         </li>
                         <li>
-                            <a href="/dashboard/rombel" class="nav-link">
-                                <i data-feather="globe"></i>
-                                <span> Rombel </span>
+                                <a href="{{ route('logout') }}" class="nav-link"
+                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                <i class="fa-solid fa-right-from-bracket" style="color: #c81498;"></i>
+                                <span>Logout</span>
                             </a>
+                            
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                            
                         </li>
-                    @endif
-
-                    @if (Auth::user()->role == User::ROLE_DOSEN)
-                        <li>
-                            <a href="/dashboard/dosen" class="nav-link">
-                                <i data-feather="globe"></i>
-                                <span> Dosen </span>
-                            </a>
+                        <!--Dosen = Pengguna -->
+                    @elseif (Auth::user()->role == User::ROLE_DOSEN)
+                    <li>
+                        <a href="/dashboard/prodi" class="nav-link">
+                            <i class="fa-solid fa-user" style="color: #c81498;"></i>
+                            <span> Home </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/dashboard/prodi" class="nav-link">
+                            <i class="fa-solid fa-user" style="color: #c81498;"></i>
+                            <span> Profile </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/dashboard/dosen" class="nav-link">
+                            <i class="fa-solid fa-calendar-days" style="color: #c81498;"></i>
+                            <span> Pencatan Kesehatan
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/dashboard/mahasiswa" class="nav-link">
+                            <i class="fa-solid fa-clipboard" style="color: #c81498;"></i>
+                            <span> Komunitas </span>
+                        </a>
+                    </li>
+                    <li>
+                            <a href="{{ route('logout') }}" class="nav-link"
+                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                            <i class="fa-solid fa-right-from-bracket" style="color: #c81498;"></i>
+                            <span>Logout</span>
+                        </a>
+                        
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        
                         </li>
-                        <li>
-                            <a href="/dashboard/mahasiswa" class="nav-link">
-                                <i data-feather="globe"></i>
-                                <span> Mahasiswa </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/dashboard/rombel" class="nav-link">
-                                <i data-feather="globe"></i>
-                                <span> Rombel </span>
-                            </a>
-                        </li>
-                    @endif
-
-                    @if (Auth::user()->role == User::ROLE_MAHASISWA)
-                        <li>
-                            <a href="/dashboard/mahasiswa" class="nav-link">
-                                <i data-feather="globe"></i>
-                                <span> Mahasiswa </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/dashboard/rombel" class="nav-link">
-                                <i data-feather="globe"></i>
-                                <span> Rombel </span>
-                            </a>
-                        </li>
+                        <!--Mahasiswa = Tenaga Medis -->
+                    @elseif (Auth::user()->role == User::ROLE_MAHASISWA)
+                    <li>
+                        <a href="/dashboard/prodi" class="nav-link">
+                            <i class="fa-solid fa-user" style="color: #c81498;"></i>
+                            <span> Profile </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/dashboard/dosen" class="nav-link">
+                            <i class="fa-solid fa-calendar-days" style="color: #c81498;"></i>
+                            <span> Daftar Pasien
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                            <a href="{{ route('logout') }}" class="nav-link"
+                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                            <i class="fa-solid fa-right-from-bracket" style="color: #c81498;"></i>
+                            <span>Logout</span>
+                        </a>
+                        
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        
+                    </li>
                     @endif
                 @endauth
             </ul>

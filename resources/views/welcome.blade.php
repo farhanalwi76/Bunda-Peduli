@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon -->
-	<link rel="icon" type="image/png" sizes="56x56" href="{{ asset('admin/dist/assets/images/main/favicon.ico') }}">
+	<link rel="shortcut icon" href="{{ asset('admin/src/images/kogo bidan.jpg') }}">
 	<!-- bootstrap CSS -->
 	<link rel="stylesheet" href="{{ asset('admin/dist/assets/landing/assets/css/bootstrap.min.css') }}" type="text/css" media="all">
 	<!-- carousel CSS -->
@@ -34,8 +34,10 @@
 	<link rel="stylesheet" href="{{ asset('admin/dist/assets/landing/assets/css/dropdown.css') }}" type="text/css" media="all">
 	<!-- responsive CSS -->
 	<link rel="stylesheet" href="{{ asset('admin/dist/assets/landing/assets/css/responsive.css') }}" type="text/css" media="all">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<!-- modernizr js -->
 	<script src="{{ asset('admin/dist/assets/landing/assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
+	<link rel="icon" href="{{ asset('admin/src/images/kogo bidan.jpg"') }}" type="image/png">
 </head>
 
 <body>
@@ -47,46 +49,43 @@
 	<!-- Start Header Area -->
 	<!--==================================================-->
 	<header class="header-area" id="sticky-header">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-2">
-					<div class="logo">
-						<a href="index.html"><img src="https://dl.dropbox.com/scl/fi/0swx2av8l9jradvyj6d4x/404.png?rlkey=m27xtoqzkywz7h5uof4i1sh7v&st=4sffy5dg&dl=0" width="150" alt="150"></a>
-					</div>
-				</div>
-				<div class="col-lg-10">
-					<div class="header-menu">
-						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Profil</a>
-								<!-- <div class="sub-menu">
-									<ul>
-										<li><a href="blog-details.html">Sejarah </a></li>
-										<li><a href="course-detials.html">Visi & Misi</a></li>
-										<li><a href="team.html">Profil Dosen</a></li>
-									</ul>
-								</div> -->
-							</li>
-							<li><a href="#course">BMI</a></li>
-							<li><a href="#prodi2">Resep</a></li>
-							<li><a href="#video">Gizi Sehat</a></li>
-							<li><a href="#testi">Konsultasi</a></li>
-							<li><a href="{{ route('register') }}">Register</a></li>
-						</ul>
-						<div class="main-btn">
-							<a href="{{ route('login') }}" class="nest-btn">
-								<span class="nest-btn__shape"></span>
-								<span class="nest-btn__shape"></span>
-								<span class="nest-btn__shape"></span>
-								<span class="nest-btn__shape"></span>
-								<span class="nest-btn__text">Login</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Logo dan Teks Bunda Peduli -->
+            <div class="col-lg-2 d-flex align-items-center">
+                <a href="index.html" class="d-flex align-items-center text-decoration-non">
+                    <img src="https://www.dropbox.com/scl/fi/4a6kod3m1l1u7ukq9p60w/logo-remove.png?rlkey=wslgefag7hc5gef0wv6sz09c6&raw=1" width="80" alt="Logo Bidan" />
+					<span class="ms-2 fs-2" style="white-space: nowrap;">Bunda Peduli</span>
+				</a>
+                
+            </div>
+
+            <!-- Menu Navbar -->
+            <div class="col-lg-10">
+                <div class="header-menu">
+                    <ul class="d-flex justify-content-center list-unstyled m-0">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Profil</a></li>
+                        <li><a href="#course">BMI</a></li>
+                        <li><a href="#prodi2">Resep</a></li>
+                        <li><a href="#video">Gizi Sehat</a></li>
+                        <li><a href="#testi">Konsultasi</a></li>
+                        <li><a href="{{ route('register') }}">Register</a></li>
+                    </ul>
+                    <div class="main-btn">
+                        <a href="{{ route('login') }}" class="nest-btn">
+                            <span class="nest-btn__shape"></span>
+                            <span class="nest-btn__shape"></span>
+                            <span class="nest-btn__shape"></span>
+                            <span class="nest-btn__shape"></span>
+                            <span class="nest-btn__text">Login</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
 	<!-- estudy Mobile Menu Area -->
 	<div class="mobile-menu-area sticky-menu" id="navbar">
@@ -146,7 +145,7 @@
 					</div>
 					<div class="col-lg-6">
 						<div class="slider-thumb">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/slider/slider-thumb.png') }}" alt="">
+							<img src="{{ asset('admin/dist/assets/landing/assets/images/slider/Happy young woman with a baby in her arms.png') }}" alt="">
 						</div>
 					</div>
 				</div>
@@ -199,17 +198,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-                    <div class="section-title-shape">
-                        <img src="{{ asset('admin/dist/assets/landing/assets/images/resource/section-shape.png') }}" alt="">
-                    </div>
-                    <div class="section-sub-title" >
-                        <p>Selamat datang di website resmi kami. Bunda peduli menyediakan layanan konsultasi gizi anak</p>
-                    </div>
                 </div>
 
-               <!-- Kalkulator BMI Section -->
+                <!-- Kalkulator BMI Section -->
 				<div class="prodi mt-5" id="course">
-				<h1 class="text-start mb-1 text-primary">Kalkulator BMI</h1>
+				<h1 class="text-start mb-1 text-black">Kalkulator BMI</h1>
 
 				<div class="row mb-4">
 					<!-- Penjelasan Rumus dan Deskripsi di sebelah kiri -->
@@ -261,23 +254,39 @@
 
 
         <!-- Kalkulator dan Solusi Section -->
-        <div class="row justify-content-center align-items-center mt-4 mb-5">
-            <div class="col-md-6">
-                <!-- Kalkulator BMI Card -->
-                <div class="card p-4 shadow-lg rounded">
-                    <h2 class="text-center mb-4 text-primary">Hitung BMI</h2>
-                    <form id="bmiForm">
-                        <div class="mb-3">
-                            <label for="weight" class="form-label">Berat (kg):</label>
-                            <input type="number" id="weight" class="form-control" required placeholder="Masukkan berat badan (kg)">
-                        </div>
-                        <div class="mb-3">
-                            <label for="height" class="form-label">Tinggi (cm):</label>
-                            <input type="number" id="height" class="form-control" required placeholder="Masukkan tinggi badan (cm)">
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Submit</button>
-                    </form>
-
+		
+		<!DOCTYPE html>
+		<html lang="id">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Kalkulator BMI</title>
+			<style>
+				.custom-card {
+					background-color: #EBA199; 
+					border-radius: 10px;  
+					box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+					padding: 20px;           
+				}
+			</style>
+		</head>
+		<body>
+			<div class="row justify-content-center align-items-center mt-4 mb-5">
+				<div class="col-md-6">
+					<!-- Kalkulator BMI Card -->
+					<div class="card p-4 shadow-lg rounded custom-card">
+						<h2 class="text-center mb-4 text-black">Hitung BMI</h2>
+						<form id="bmiForm">
+							<div class="mb-3">
+								<label for="weight" class="form-label">Berat (kg):</label>
+								<input type="number" id="weight" class="form-control" required placeholder="Masukkan berat badan (kg)">
+							</div>
+							<div class="mb-3">
+								<label for="height" class="form-label">Tinggi (cm):</label>
+								<input type="number" id="height" class="form-control" required placeholder="Masukkan tinggi badan (cm)">
+							</div>
+							<button type="submit" class="btn w-100" style="background-color: #90CBC1; border: none; color: white;">Submit</button>
+						</form>
                     <!-- Hasil BMI -->
                     <div id="bmi-result" class="mt-4" style="display:none;">
                         <h3 class="text-center">Hasil BMI:</h3>
@@ -288,16 +297,21 @@
             </div>
 
             <!-- Solusi & Informasi BMI Card -->
-            <div class="col-md-6">
-                <div class="card p-4 shadow-lg rounded">
-                    <h2 class="text-center mb-4 text-primary">Solusi & Informasi BMI</h2>
-                    <div id="solution" class="text-center">
-                        <p class="fs-5">Masukkan berat dan tinggi badan untuk mengetahui kategori BMI Anda dan solusi yang sesuai.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+			<div class="col-md-6">
+				<div class="card p-4 shadow-lg rounded">
+					<style>
+						.card {
+							background-color: #EBA199; /* Warna latar belakang card */
+							border-radius: 10px; /* Menambah radius pada sudut */
+						}
+					</style>
+					<h2 class="text-center mb-4 text-black">Solusi & Informasi BMI</h2>
+					<div id="solution" class="text-center">
+						<p class="fs-5">Masukkan berat dan tinggi badan untuk mengetahui kategori BMI Anda dan solusi yang sesuai.</p>
+					</div>
+				</div>
+			</div>
+			
 </div>
 
 	<!--==================================================-->
@@ -312,25 +326,13 @@
 		<div class="row align-items-center">
 			<div class="col-lg-6 col-md-12">
 				<div class="section-title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-					<div class="section-title-shape">
-						<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/section-shape.png') }}" alt="">
-					</div>
-					<div class="section-sub-title">
-					</div>
-					<div class="prodi">
-						<h2>Resep Makanan Bergizi</h2>
-						<br>
-						<p>Resep makanan bergizi yang menggabungkan berbagai bahan alami dan penuh dengan vitamin, protein, dan nutrisi lainnya.</p>
-						<p>Visi: Menyajikan makanan sehat untuk mendukung pola hidup yang lebih baik.</p>
-						<p>Prospek: Menjaga kesehatan tubuh dan mendukung kebugaran fisik.</p>
-					</div>
+					
 				</div>
 			</div>
 			<div class="col-lg-9 col-md-12 mx-auto ">
 				<ul class="course-menu d-flex justify-content-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-					<li class=""><a href="#!" data-mixitup-control="" data-filter=".ios" class="">Resep Sarapan</a></li>
-					<li class=""><a href="#!" data-mixitup-control="" data-filter=".and" class="">Resep Makan Siang</a></li>
-					<li class=""><a href="#!" data-mixitup-control="" data-filter=".mar" class="">Resep Makan Malam</a></li>
+					<h1>Resep Makanan Sehat</h1>
+
 				</ul>
 			</div>
 		</div>
@@ -338,15 +340,15 @@
 			<div class="col-lg-4 col-md-6 mix ios des">
 				<div class="course-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 					<div class="course-thumb">
-						<img src="https://via.placeholder.com/400x300" alt="">
-						<img src="https://via.placeholder.com/400x300" alt="">
+						<img src="/admin/src/images/ayam.png" alt="Admin Image">
+						<img src="/admin/src/images/ayam.png" alt="Admin Image">
 						<div class="course-icon">
 							<i class="bi bi-heart"></i>
 						</div>
 					</div>
 					<div class="course-content">
 						<div class="course-title">
-							<h4><a href="#">Resep Smoothie Buah & Sayuran</a></h4>
+							<h4><a href="https://hellosehat.com/parenting/anak-1-sampai-5-tahun/gizi-balita/menu-makan-malam-anak/">Pasta Ayam Bayam</a></h4>
 						</div>
 						<div class="course-bottom">
 							<div class="course-price">
@@ -361,15 +363,15 @@
 			<div class="col-lg-4 col-md-6 mix ios and">
 				<div class="course-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
 					<div class="course-thumb">
-						<img src="https://via.placeholder.com/400x300" width="200" alt="">
-						<img src="https://via.placeholder.com/400x300" width="200"  alt="">
+						<img src="/admin/src/images/nasi.png" alt="Admin Image">
+						<img src="/admin/src/images/nasi.png" alt="Admin Image">
 						<div class="course-icon">
 							<i class="bi bi-heart"></i>
 						</div>
 					</div>
 					<div class="course-content">
 						<div class="course-title">
-							<h4><a href="#">Salad Sayuran Segar dengan Dressing Lemon</a></h4>
+							<h4><a href="#">Nasi Goreng Seafood</a></h4>
 						</div>
 						<div class="course-bottom">
 							<div class="course-price">
@@ -383,15 +385,15 @@
 			<div class="col-lg-4 col-md-6 mix mar des">
 				<div class="course-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
 					<div class="course-thumb">
-						<img src="https://via.placeholder.com/400x300" alt="">
-						<img src="https://via.placeholder.com/400x300" alt="">
+						<img src="/admin/src/images/sayur.png" alt="Admin Image">
+						<img src="/admin/src/images/sayur.png" alt="Admin Image">
 						<div class="course-icon">
 							<i class="bi bi-heart"></i>
 						</div>
 					</div>
 					<div class="course-content">
 						<div class="course-title">
-							<h4><a href="#">Bubur Oatmeal Pisang Susu Murni</a></h4>
+							<h4><a href="#">Sup Ayam</a></h4>
 						</div>
 						<div class="course-bottom">
 							<div class="course-price">
@@ -405,15 +407,15 @@
 			<div class="col-lg-4 col-md-6 mix and des">
 				<div class="course-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 					<div class="course-thumb">
-						<img src="https://via.placeholder.com/400x300" alt="">
-						<img src="https://via.placeholder.com/400x300" alt="">
+						<img src="/admin/src/images/makaroni.png" alt="Admin Image">
+						<img src="/admin/src/images/makaroni.png" alt="Admin Image">
 						<div class="course-icon">
 							<i class="bi bi-heart"></i>
 						</div>
 					</div>
 					<div class="course-content">
 						<div class="course-title">
-							<h4><a href="#">Nasi Tim Ayam Sayur Sop dan Tahu </a></h4>
+							<h4><a href="#">Makaroni Skotel </a></h4>
 						</div>
 						<div class="course-bottom">
 							<div class="course-price">
@@ -427,15 +429,15 @@
 			<div class="col-lg-4 col-md-6 mix mar ios">
 				<div class="course-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
 					<div class="course-thumb">
-						<img src="https://via.placeholder.com/400x300" alt="">
-						<img src="https://via.placeholder.com/400x300" alt="">
+						<img src="/admin/src/images/hati.png" alt="Admin Image">
+						<img src="/admin/src/images/hati.png" alt="Admin Image">
 						<div class="course-icon">
 							<i class="bi bi-heart"></i>
 						</div>
 					</div>
 					<div class="course-content">
 						<div class="course-title">
-							<h4><a href="#">Ayam Panggang dengan Brokoli</a></h4>
+							<h4><a href="#">Semur Hati Ayam</a></h4>
 						</div>
 						<div class="course-bottom">
 							<div class="course-price">
@@ -449,15 +451,160 @@
 			<div class="col-lg-4 col-md-6 mix and mar">
 				<div class="course-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
 					<div class="course-thumb">
-						<img src="https://via.placeholder.com/400x300" alt="">
-						<img src="https://via.placeholder.com/400x300" alt="">
+						<img src="/admin/src/images/lemon.png" alt="Admin Image">
+						<img src="/admin/src/images/lemon.png" alt="Admin Image">
 						<div class="course-icon">
 							<i class="bi bi-heart"></i>
 						</div>
 					</div>
 					<div class="course-content">
 						<div class="course-title">
-							<h4><a href="#">Smoothie Bowl dengan Granola</a></h4>
+							<h4><a href="#">ES Loli Alpukat</a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
+							</div>
+							<div class="course-cart">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+			<div class="col-lg-9 col-md-12 mx-auto ">
+				<ul class="course-menu d-flex justify-content-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+					<h1>Gizi Sehat</h1>
+				</ul>
+			</div>
+		</div>
+		<div class="row filters" id="MixItUp7324BF">
+			<div class="col-lg-4 col-md-6 mix ios des">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="/admin/src/images/1.png" alt="Admin Image">
+						<img src="/admin/src/images/1.png" alt="Admin Image">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
+						</div>
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="https://www.alodokter.com/ketahui-10-manfaat-jus-buah-bagi-kesehatan-dan-cara-sehat-membuatnya">Ketahui 10 Manfaat Jus Buah bagi Kesehatan dan Cara Sehat Membuatnya</a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
+								<span></span>
+							</div>
+							<div class="course-cart">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mix ios and">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="/admin/src/images/2.png" alt="Admin Image">
+						<img src="/admin/src/images/2.png" alt="Admin Image">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
+						</div>
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="https://www.alodokter.com/beragam-jenis-ikan-yang-tidak-boleh-untuk-mpasi">Beragam Jenis Ikan yang Tidak Boleh untuk MPASI</a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
+							</div>
+							<div class="course-cart">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mix mar des">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="/admin/src/images/telor.png" alt="Admin Image">
+						<img src="/admin/src/images/telor.png" alt="Admin Image">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
+						</div>
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="https://www.alodokter.com/6-manfaat-telur-puyuh-untuk-anak-yang-sayang-dilewatkan">6 Manfaat Telur Puyuh untuk Anak yang Sayang Dilewatkan</a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
+							</div>
+							<div class="course-cart">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mix and des">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="/admin/src/images/sambel.png" alt="Admin Image">
+						<img src="/admin/src/images/sambel.png" alt="Admin Image">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
+						</div>
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="#">Tekstur MPASI 6 Bulan dan Resepnya </a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
+							</div>
+							<div class="course-cart">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mix mar ios">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="/admin/src/images/bumbu.png" alt="Admin Image">
+						<img src="/admin/src/images/bumbu.png" alt="Admin Image">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
+						</div>
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="https://www.alodokter.com/tekstur-mpasi-6-bulan-dan-resepnya">Mengenal Real Food dan Manfaatnya untuk Kesehatan</a></h4>
+						</div>
+						<div class="course-bottom">
+							<div class="course-price">
+							</div>
+							<div class="course-cart">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mix and mar">
+				<div class="course-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
+					<div class="course-thumb">
+						<img src="/admin/src/images/krupuk.png" alt="Admin Image">
+						<img src="/admin/src/images/krupuk.png" alt="Admin Image">
+						<div class="course-icon">
+							<i class="bi bi-heart"></i>
+						</div>
+					</div>
+					<div class="course-content">
+						<div class="course-title">
+							<h4><a href="https://www.alodokter.com/menu-mpasi-jamur-solusi-praktis-penuhi-kebutuhan-nutrisi-si-kecil">Menu MPASI Jamur, Solusi Praktis Penuhi Kebutuhan Nutrisi Si Kecil</a></h4>
 						</div>
 						<div class="course-bottom">
 							<div class="course-price">
@@ -475,246 +622,6 @@
 	<!--==================================================-->
 	<!-- End Course  Area -->
 	<!--==================================================-->
-
-	<div class="choose-us-area">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-6 col-md-12">
-					<div class="section-title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<div class="section-title-shape">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/section-shape.png') }}" alt="">
-						</div>
-						<div class="section-sub-title">
-						</div>
-						<div class="section-main-title">
-                        	<h2>Bunda Peduli: Layanan Khusus untuk Ibu Hamil dan Balita</h2>
-                        		<p>Bunda Peduli hadir untuk memberikan layanan dukungan, konsultasi, dan bantuan bagi ibu hamil dan balita yang memerlukan bantuan dalam merawat diri dan anak-anak mereka. Kami berkomitmen untuk memberikan informasi, bantuan, dan dukungan yang dapat membantu ibu menjalani masa kehamilan dengan sehat dan menjaga kesejahteraan balita mereka.</p>
-                        		<p>Visi kami adalah untuk membantu ibu hamil dan orang tua balita agar merasakan pengalaman yang sehat dan bahagia dalam merawat anak-anak mereka, dengan dukungan penuh dari tenaga medis yang ahli.</p>
-                        		<P>Layanan kami mencakup konsultasi kesehatan ibu hamil, perawatan balita, edukasi pengasuhan, serta bantuan untuk meringankan tugas sehari-hari ibu yang memerlukan dukungan.</P>
-                    	</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="main-btn choose wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 col-md-12">
-					<div class="choose-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<div class="choose-thumb">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/choose1.png') }}" alt="">
-						</div>
-						<div class="choose-content">
-                        	<span>July 05, 2024</span>
-                        	<h4>Konsultasi Kesehatan Ibu Hamil</h4>
-                        	<p>Memberikan informasi dan dukungan tentang kehamilan yang sehat, pemeriksaan rutin, serta tips untuk merawat ibu hamil.</p>
-                    	</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="choose-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<div class="choose-thumb">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/choose2.png') }}" alt="">
-						</div>
-						<div class="choose-content">
-                        	<span>July 05, 2024</span>
-                        	<h4>Perawatan Balita dan Tumbuh Kembang</h4>
-                        	<p>Mendukung ibu dalam merawat balita dan memastikan perkembangan yang sehat, dengan tips pengasuhan yang berguna bagi anak-anak mereka.</p>
-                    	</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="choose-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-						<div class="choose-thumb">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/choose3.png') }}" alt="">
-						</div>
-						<div class="choose-content">
-							<span>July 05, 2024</span>
-                        	<h4>Bantuan Pengasuhan dan Keseharian</h4>
-                        	<p>Memberikan dukungan dalam pengasuhan harian, membantu ibu mengelola waktu dan memberikan panduan untuk pengasuhan yang efektif.</p>
-                    	</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="choose-single-box wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-						<div class="choose-thumb">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/choose4.png') }}" alt="">
-						</div>
-						<div class="choose-content">
-						<span>July 05, 2024</span>
-                        <h4>Konsultasi Gizi untuk Ibu dan Balita</h4>
-                        <p>Menyediakan konsultasi gizi untuk memastikan pola makan yang sehat bagi ibu hamil dan balita untuk mendukung kesehatan mereka.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<!--==================================================-->
-	<!-- Start Help  Area -->
-	<!--==================================================-->
-	<div class="help-area">
-		<div class="container">
-			<div class="row align-items-center">
-					<div class="help-main-title wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<h2>BUNDA PEDULI</h2>
-					</div>
-					<div class="help-list wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-						<span><i class="bi bi-check"></i> Memberikan dukungan bagi ibu hamil dan balita yang membutuhkan bantuan</span>
-                		<span><i class="bi bi-check"></i> Memastikan kesejahteraan ibu dan anak melalui layanan konsultasi</span>
-                		<span><i class="bi bi-check"></i> Memberikan solusi dalam perawatan harian ibu dan balita</span>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="help-items-box wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-						<div class="help-icon-thumb">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/help-icon.png') }}" alt="">
-						</div>
-						<div class="help-items-content">
-							<h6>Call us</h6>
-							<h4><a href="#">+21 776 865</a></h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--==================================================-->
-	<!-- End Help  Area -->
-	<!--==================================================-->
-
-
-
-
-	<!--==================================================-->
-	<!-- Start Team Area -->
-	<!--==================================================-->
-	<div class="team-area" id="team">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title text-center wow fadeInUp animated" data-wow-delay="100ms">
-						<div class="section-title-shape">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/section-shape.png') }}" alt="">
-						</div>
-						<div class="section-sub-title">
-							<h4>Data Tim Medis</h4>
-						</div>
-						<div class="section-main-title">
-							<h2>Bunda Peduli</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<div class="team-single-box wow fadeInUp animated" data-wow-delay="200ms">
-						<div class="team-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/bymz7fpgxck6vrfc0kvbo/IMG-20240706-WA0006.jpg?rlkey=f31x67flokwa1m21phpg6qlk9&st=h14wey2c&dl=0" alt="">
-						</div>
-						<div class="team-content">
-							<div class="team-title">
-								<h4><a href="team-detials.html">Dr. Asep Kuswandi</a></h4>
-								<span>Asisten Profesional</span>
-							</div>
-							<div class="team-social-icon">
-								<ul>
-									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="team-btn">
-								<a href="team-detials.html">Lihat Detail</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="team-single-box wow fadeInUp animated" data-wow-delay="300ms">
-						<div class="team-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/8e3caljzx65j0pomwf2lq/IMG-20240706-WA0007.jpg?rlkey=pfv4ia3f6nbyusavq3vb16kay&st=2wbfjyz3&dl=0" alt="">
-						</div>
-						<div class="team-content">
-							<div class="team-title">
-								<h4><a href="team-detials.html">Dr. Bambang Supriyadi</a></h4>
-								<span>Dokter Kepala Ibu dan Anak</span>
-							</div>
-							<div class="team-social-icon">
-								<ul>
-									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="team-btn">
-								<a href="cv2.html">Lihat Detail</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="team-single-box wow fadeInUp animated" data-wow-delay="400ms">
-						<div class="team-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/0zw22el295pggnzjwo4sm/IMG-20240706-WA0008.jpg?rlkey=2bxlkw9n6yroyw2kqcfw19c14&st=xz4gnik1&dl=0" alt="">
-						</div>
-						<div class="team-content">
-							<div class="team-title">
-								<h4><a href="team-detials.html">Dr. Taufik Hidayat</a></h4>
-								<span>Dokter Kesehatan Balita</span>
-							</div>
-							<div class="team-social-icon">
-								<ul>
-									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="team-btn">
-								<a href="cv3.html">Lihat Detail</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="team-single-box wow fadeInUp animated" data-wow-delay="500ms">
-						<div class="team-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/6jksngpntvkx7u651cf8v/IMG-20240706-WA0013.jpg?rlkey=9yc95il3xn3chqku6258u8deb&st=mlskf3ck&dl=0" alt="">
-						</div>
-						<div class="team-content">
-							<div class="team-title">
-								<h4><a href="team-detials.html">Dr. Mahdi Wijaya</a></h4>
-								<span>Dokter Spesialis Kesehatan Ibu Hamil</span>
-							</div>
-							<div class="team-social-icon">
-								<ul>
-									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
-							</div>
-							<div class="team-btn">
-								<a href="cv4,html">Lihat Detail</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--==================================================-->
-	<!-- End Team Area -->
-	<!--==================================================-->
-
-
 	<!--==================================================-->
 	<!-- Start Video Gallery Area -->
 	<!--==================================================-->
@@ -725,112 +632,7 @@
 	<!--==================================================-->
 	<!-- Start Testimonial Area -->
 	<!--==================================================-->
-	<div class="testimonial-area" id="testi">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title text-center wow fadeInUp animated" data-wow-delay="100ms">
-						<div class="section-title-shape">
-							<img src="{{ asset('admin/dist/assets/landing/assets/images/resource/section-shape.png') }}" alt="">
-						</div>
-						<div class="section-sub-title">
-							<h4>MAHASISWA </h4>
-						</div>
-						<div class="section-main-title">
-							<h2>BERPRESTASI</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column">
-					<div class="testi-single-box wow fadeInUp animated" data-wow-delay="200ms">
-						<div class="testi-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/ktjp990tdqg0setk8a49p/WhatsApp-Image-2024-07-06-at-10.38.41_cdb6ccd3.jpg?rlkey=hgewdos8819vg8okd77pqvvcr&st=wjthukgl&dl=0" alt="">
-							<div class="testi-content">
-								<h4> Farhan Abdullah</h4>
-								<span>Teknik Informatika/span>
-								<p>pengembangan aplikasi mobile dan kecerdasan buatan. Saya telah berhasil mengembangkan beberapa aplikasi berbasis AI yang telah diimplementasikan di industri lokal. </p>
-							</div>
-						</div>
-					</div>
-					<div class="testi-items-box two wow fadeInUp animated" data-wow-delay="400ms">
-						<div class="testi-shape">
-						</div>
-						<div class="testi-icon">
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-						</div>
-						<div class="testi-item-content">
-							<h4>Farhan Abdullah</h4>
-							<span>Web Developer</span>
-							<p> Saya Rizky Pratama, mahasiswa semester enam di Jurusan Teknik Informatika, Universitas 404 Jakarta. Saya memiliki minat yang besar dalam pengembangan aplikasi mobile dan kecerdasan buatan. </p>
-						</div>
-					</div>
-				</div>
-				<div class="column">
-					<div class="testi-items-box wow fadeInUp animated" data-wow-delay="600ms">
-						<div class="testi-shape">
-						</div>
-						<div class="testi-icon">
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-						</div>
-						<div class="testi-item-content">
-							<h4>Anisa Putri</h4>
-							<p>Saya Anisa Putri, mahasiswa tingkat akhir di Program Studi Sistem Informasi, Universitas 404 Jakarta. Saya tertarik pada analisis bisnis dan manajemen sistem informasi.</p>
-						</div>
-					</div>
-					<div class="testi-single-box wow fadeInUp animated" data-wow-delay="800ms">
-						<div class="testi-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/5ra1teq317hrik937oi1u/WhatsApp-Image-2024-07-06-at-10.38.41_0a66cf95.jpg?rlkey=sxw1r9sn961gk79js2eqa6qsq&st=4iqp5f2z&dl=0" alt="">
-							<div class="testi-content">
-								<h4>Anisa Putri</h4>
-								<span>Senior Consultant</span>
-								<p>Telah berhasil memenangkan kompetisi analisis data regional dan menerapkan solusi analitik untuk meningkatkan efisiensi operasional dalam sebuah perusahaan start-up lokal.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column">
-					<div class="testi-single-box wow fadeInUp animated" data-wow-delay="1000ms">
-						<div class="testi-thumb">
-							<img src="https://dl.dropbox.com/scl/fi/tq8cwv1ivajmw8gn5a6ey/WhatsApp-Image-2024-07-06-at-10.38.41_1329f798.jpg?rlkey=hqqmnfedlhk0p5rm2c8zj09xl&st=lcz8wd1c&dl=0" alt="">
-							<div class="testi-content">
-								<h4>Aditya Nugraha</h4>
-								<p>berhasil mengembangkan strategi pemasaran digital yang inovatif untuk beberapa perusahaan lokal, meningkatkan visibilitas dan penjualan mereka secara signifikan.</p>
-							</div>
-						</div>
-					</div>
-					<div class="testi-items-box two wow fadeInUp animated" data-wow-delay="1200ms">
-						<div class="testi-shape">
 
-						</div>
-						<div class="testi-icon">
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-							<i class="bi bi-star-fill"></i>
-						</div>
-						<div class="testi-item-content">
-							<h4>Aditya Nugraha</h4>
-							<p>Saya Aditya Nugraha, mahasiswa tahun ketiga di Program Studi Bisnis Digital, Universitas 404 Jakarta. Saya memiliki minat yang mendalam dalam e-commerce dan pemasaran digital. </p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--==================================================-->
-	<!-- End Testimonial Area -->
-	<!--==================================================-->
 
 	<!--==================================================-->
 	<!-- Start Sidebar Area -->
@@ -949,7 +751,7 @@
 								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
 								<li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
-								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="https://www.instagram.com/ti4_flaminggo?igsh=MW1jZ2s5OWpqdHNmeg=="><i class="fab fa-instagram"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -972,7 +774,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
 						<div class="footer-wiget-title">
-							<h4>Get In Touch</h4>
+							<h4>Hubungi Kami</h4>
 						</div>
 						<div class="footer-wiget-touch">
 							<ul>
@@ -981,10 +783,10 @@
 										<i class="bi bi-geo-alt"></i>
 									</div>
 									<div class="title">
-										<h6>Address</h6>
+										<h6>Alamat</h6>
 									</div>
 									<div class="adress">
-										<a href="#">122. Kemayoran. Jakarta</a>
+										<a href="https://maps.app.goo.gl/u8WrngSjuymeoJ688">Jalan Lenteng Agung Raya No.20 RT.5/RW.1 Lenteng Agung, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12640</a>
 									</div>
 								</li>
 								<li>
@@ -992,10 +794,10 @@
 										<i class="bi bi-telephone-plus-fill"></i>
 									</div>
 									<div class="title">
-										<h6>Phone</h6>
+										<h6>Nomer Telpon</h6>
 									</div>
 									<div class="adress">
-										<a href="#">(+21) 776 865</a>
+										<a href="https://wa.me/qr/J4RRHOOKWOBPP1">088296554844</a>
 									</div>
 								</li>
 								<li>
@@ -1006,7 +808,7 @@
 										<h6>Email</h6>
 									</div>
 									<div class="adress">
-										<a href="#">universitasjkrt@gmail.com</a>
+										<a href="#">Flaminggo@gmail.com</a>
 									</div>
 								</li>
 							</ul>
@@ -1023,15 +825,11 @@
 			<div class="row align-items-center mt-90">
 				<div class="col-lg-6 col-md-12">
 					<div class="copyright-text">
-						<p>© 2023 - 2025 | Universitas 404 Jakarta</a>
+						<p>2024 - 2025 | Flaminggo</a>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
 					<div class="footer-privacy-menu">
-						<ul>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms & Conditions</a></li>
-						</ul>
 					</div>
 				</div>
 			</div>

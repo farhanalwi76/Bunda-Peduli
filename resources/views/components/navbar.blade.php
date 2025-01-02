@@ -81,7 +81,7 @@
                                             </p>
                                         </a>
                                         <!-- Item End -->
-                                    </div>
+                                    </div>a
         
                                     <!-- All-->
                                     <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
