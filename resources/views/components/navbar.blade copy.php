@@ -38,18 +38,50 @@
                                     <div class="noti-scroll" data-simplebar>
         
                                         <!-- item-->
-                                       
-                                            
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary active">
+                                            <div class="notify-icon">
+                                                <img src="{{ asset('admin/dist/assets/images/users/user-12.jpg') }}" class="img-fluid rounded-circle" alt="" />
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <p class="notify-details">Ahmad Fauzi</p>
+                                                <small class="text-muted">15 min ago</small>
+                                            </div>
+                                            <p class="mb-0 user-msg">
+                                                <small class="fs-14">Pengingat <span class="text-reset">"Anda memiliki pesan baru dari mahasiswa bimbingan Anda, Ahmad. Silakan periksa kotak masuk Anda untuk membaca pesan tersebut dan memberikan tanggapan. Pastikan Anda merespon sebelum tanggal 20 Juli 2024 untuk memastikan proses bimbingan berjalan lancar. Terima kasih."</span></small>
+                                            </p>
+                                        </a>
                                         <!-- Item End -->
 
                                           <!-- item-->
-                                          
+                                          <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary active">
+                                            <div class="notify-icon">
+                                                <img src="{{ asset('admin/dist/assets/images/users/user-14.jpg') }}" class="img-fluid rounded-circle" alt="" />
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <p class="notify-details">Siti Nurhaliza</p>
+                                                <small class="text-muted">10 min ago</small>
+                                            </div>
+                                            <p class="mb-0 user-msg">
+                                                <small class="fs-14">Pengingat <span class="text-reset">"Anda memiliki jadwal bimbingan dengan mahasiswa, Siti Nurhaliza, pada tanggal 15 Juli 2024 pukul 10:00 WIB. Mohon pastikan Anda hadir tepat waktu untuk membantu kelancaran proses bimbingan akademik."</span></small>
+                                            </p>
+                                        </a>
                                         <!-- Item End -->
 
                                           <!-- item-->
-                                          
+                                          <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary active">
+                                            <div class="notify-icon">
+                                                <img src="{{ asset('admin/dist/assets/images/users/user-13.jpg') }}" class="img-fluid rounded-circle" alt="" />
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <p class="notify-details">Budi Santoso</p>
+                                                <small class="text-muted">5 min ago</small>
+                                            </div>
+                                            <p class="mb-0 user-msg">
+                                                <small class="fs-14">Completed <span class="text-reset">"Mahasiswa bimbingan Anda, Budi Santoso, telah mengunggah laporan tugas akhir untuk direview. Silakan periksa dan berikan feedback melalui portal bimbingan sebelum tanggal 25 Juli 2024 untuk mendukung kemajuan akademik mahasiswa."</span></small>
+                                            </p>
+                                        </a>
                                         <!-- Item End -->
-                                    </div>
+                                    </div>a
         
                                     <!-- All-->
                                     <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
@@ -70,7 +102,7 @@
                                 <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
                                     <!-- item-->
                                     <div class="dropdown-header noti-title">
-                                        <h6 class="text-overflow m-0">Pengguna</h6>
+                                        <h6 class="text-overflow m-0"> {{ Auth::user()->role ?? '' }}</h6>
                                     </div>
         
                                     <div class="dropdown-divider"></div>

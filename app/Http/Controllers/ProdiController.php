@@ -13,7 +13,7 @@ class ProdiController extends Controller
     public function index()
     {
         $prodi = Prodi::all();
-        return view('admin.prodi.index', compact('prodi'));
+        return view('admin.prodi.index', compact('daftar_tenaga_medis'));
     }
 
     /**
@@ -44,7 +44,7 @@ class ProdiController extends Controller
     public function show(string $id)
     {
         $prodi = prodi::find($id);
-        return view('admin.prodi.show', compact('prodi'));
+        return view('admin.prodi.show', compact('daftar_tenaga_medis'));
     }
 
     /**
@@ -53,7 +53,7 @@ class ProdiController extends Controller
     public function edit(string $id)
     {
         $prodi = prodi::find($id);
-        return view('admin.prodi.edit', compact('prodi'));
+        return view('admin.prodi.edit', compact('daftar_tenaga_medis'));
     }
 
     /**

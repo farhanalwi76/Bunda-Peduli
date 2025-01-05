@@ -18,7 +18,111 @@
 
         <!-- Icons -->
         <link href="{{ asset('admin/dist/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-
+        <style>
+            .chat-box {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 300px;
+                height: 400px;
+                background-color: #ffffff;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                display: none;
+                flex-direction: column;
+            }
+    
+            .chat-header {
+                background-color: #007bff;
+                color: white;
+                padding: 10px;
+                text-align: center;
+                border-radius: 8px 8px 0 0;
+                position: relative;
+            }
+    
+            .chat-header button {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                background: none;
+                border: none;
+                color: white;
+                font-size: 20px;
+                cursor: pointer;
+            }
+    
+            .chat-messages {
+                flex: 1;
+                padding: 10px;
+                overflow-y: auto;
+                border-bottom: 1px solid #ccc;
+            }
+    
+            .chat-message {
+                margin-bottom: 10px;
+                padding: 8px;
+                border-radius: 8px;
+            }
+    
+            .chat-message.user {
+                background-color: #e1f5fe;
+                align-self: flex-end;
+            }
+    
+            .chat-message.admin {
+                background-color: #fff3e0;
+                align-self: flex-start;
+            }
+    
+            .chat-input {
+                padding: 10px;
+                display: flex;
+                gap: 10px;
+            }
+    
+            .chat-input input {
+                flex: 1;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+    
+            .chat-input button {
+                padding: 8px 12px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+    
+            .chat-input button:hover {
+                background-color: #0056b3;
+            }
+    
+            .live-chat {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #007bff;
+                color: #fff;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+                transition: transform 0.2s;
+            }
+    
+            .live-chat:hover {
+                transform: scale(1.1);
+            }
+        </style>
     </head>
 
     <!-- body start -->

@@ -1,9 +1,9 @@
 <x-layout>
     <x-slot name="main_title">
-        Halaman Prodi
+        Pencatatan Kesehatan
     </x-slot>
     <x-slot name="header_name">
-        Halaman Prodi
+        Pencatatan Kesehatan
     </x-slot>
     <x-slot name="subheader_name">
     </x-slot>
@@ -15,14 +15,18 @@
         <table class="table table-bordered text-center">
             <tr class="table-primary">
                 <th>Id</th>
-                <th>Kode</th>
-                <th>Nama</th>
+                <th>Berat Badan</th>
+                <th>Tinggi Badan</th>
+                <th>Lingkar Kepala</th>
+                <th>Umur Anak</th>
             </tr> 
             
             <tr>
-                <td>{{ $prodi->id }}</td>
-                <td>{{ $prodi->kode }}</td>
-                <td>{{ $prodi->nama }}</td>
+                <td>{{ $kesehatan->id }}</td>
+                <td>{{ $kesehatan->berat_badan }}</td>
+                <td>{{ $kesehatan->tinggi_badan }}</td>
+                <td>{{ $kesehatan->lingkar_kepala }}</td>
+                <td>{{ $kesehatan->umur_anak }}</td>
             </tr>
         </table>
     </x-slot>

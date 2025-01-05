@@ -1,9 +1,9 @@
 <x-layout>
     <x-slot name="main_title">
-        Halaman Prodi
+        Pencatatan Kesehatan
     </x-slot>
     <x-slot name="header_name">
-        Halaman Prodi
+        Pencatatan Kesehatan
     </x-slot>
     <x-slot name="subheader_name">
     </x-slot>
@@ -17,26 +17,30 @@
             <strong>{{ session('pesan') }}</strong>
         </div>
         @endif
-        <a href="{{ url('/dashboard/prodi/create') }}" class="btn btn-primary mb-2">+ Tambah Prodi</a>
+        <a href="{{ url('/dashboard/kesehatan/create') }}" class="btn btn-primary mb-3" style="background-color: #EBA199; border-color: #EBA199; border-radius: 20px;">+ Tambah Catatan</a>
         <table class="table table-bordered text-center">
             <tr class="table-primary">
                 <th>Id</th>
-                <th>Kode</th>
-                <th>Nama</th>
+                <th>Berat Badan</th>
+                <th>Tinggi Badan</th>
+                <th>Lingkar Kepala</th>
+                <th>Umur Anak</th>
                 <th>Aksi</th>
             </tr>
-            @foreach ($prodi as $p)
+            @foreach ($kesehatan as $k)
             <tr>
-                <td>{{ $p->id }}</td>
-                <td>{{ $p->kode }}</td>
-                <td>{{ $p->nama }}</td>
+                <td>{{ $k->id }}</td>
+                <td>{{ $k->berat_badan }}</td>
+                <td>{{ $k->tinggi_badan }}</td>
+                <td>{{ $k->lingkar_kepala }}</td>
+                <td>{{ $k->umur_anak }}</td>
                 <td>
-                    <a href="{{ url('dashboard/prodi/show', $p->id) }}" class="btn btn-primary"><i class="far fa-eye"></i> Lihat</a>
-                    <a href="{{ url('dashboard/prodi/edit', $p->id) }}" class="btn btn-warning"><i class="far fa-edit"></i> Edit</a>
-                    <form class="forms-sample d-inline" action="{{ url('dashboard/prodi/destroy', $p->id) }}" method="post">
+                    <a href="{{ url('dashboard/kesehatan/show', $k->id) }}" class="btn btn-primary"><i class="far fa-eye"></i> Lihat</a>
+                    <a href="{{ url('dashboard/kesehatan/edit', $k->id) }}" class="btn btn-warning"><i class="far fa-edit"></i> Edit</a>
+                    <form class="forms-sample d-inline" action="{{ url('dashboard/kesehatan/destroy', $k->id) }}" method="post">
                         @csrf 
                         @method('delete')
-                        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah yakin ingin menghapus Prodi {{ $p->nama }}?')">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus catatan {{ $k->nama }}?')">
                             <i class="far fa-trash-alt"></i> Hapus
                         </button>
                     </form>

@@ -14,8 +14,8 @@ class RombelController extends Controller
      */
     public function index()
     {
-        $rombongan_belajar = Rombel::all();
-        return view('admin.rombel.index', compact('rombongan_belajar'));
+        $daftar_pengguna = Rombel::all();
+        return view('admin.rombel.index', compact('daftar_pengguna'));
     }
 
     /**
@@ -23,11 +23,9 @@ class RombelController extends Controller
      */
     public function create()
     {
-        $rombongan_belajar = Rombel::all();
-        $prodi = Prodi::all();
-        $mahasiswa = Mahasiswa::all();
-        $dosen=Dosen::all();
-        return view('admin.rombel.create', compact('prodi', 'rombongan_belajar', 'mahasiswa', 'dosen'));
+        $daftar_pengguna = Rombel::all();
+        $daftar_pengguna = Prodi::all();
+        return view('admin.rombel.create', compact('daftar_tenaga_medis', 'daftar_pengguna'));
     }
 
     /**
@@ -51,8 +49,8 @@ class RombelController extends Controller
      */
     public function show(string $id)
     {
-        $rombongan_belajar = Rombel::find($id);
-        return view('admin.rombel.show', compact('rombongan_belajar'));
+        $daftar_pengguna = Rombel::find($id);
+        return view('admin.rombel.show', compact('daftar_pengguna'));
     }
 
     /**
@@ -61,14 +59,14 @@ class RombelController extends Controller
     public function edit(string $id)
     {
         
-        $rombongan_belajar = Rombel::find($id);
+        $daftar_pengguna = Rombel::find($id);
         $dosen = Dosen::all(); // Jika Anda membutuhkan data dosen untuk dropdown
     
-        if (!$rombongan_belajar) {
+        if (!$daftar_pengguna) {
             return redirect()->back()->with('error', 'Data Rombel tidak ditemukan.');
         }
     
-        return view('admin.rombel.edit', compact('rombongan_belajar', 'dosen'));
+        return view('admin.rombel.edit', compact('daftar_pengguna', 'daftar_tenaga_medis'));
     }
 
     /**
@@ -82,25 +80,8 @@ class RombelController extends Controller
             'id' => 'required|string',
             'dosen_pa' => 'required|integer',
         ]);
-        $rombongan_belajar = Rombel::find($id);
-        $rombongan_belajar->update($validate);
+        $daftar_pengguna = Rombel::find($id);
+        $daftar_pengguna->update($validate);
         return redirect('dashboard/rombel')->with('pesan', 'Data Berhasil Diperbarui');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        // Cek apakah ada mahasiswa yang masih menggunakan prodi ini
-        $mahasiswaCount = Mahasiswa::where('prodi_id', $id)->count();
-
-        if ($mahasiswaCount > 0) {
-            return redirect()->back()->with('error', 'Tidak bisa menghapus Rombel karena masih digunakan oleh mahasiswa.');
-        }
-
-        // Jika tidak ada, maka hapus prodi
-        Rombel::find($id)->delete();
-        return redirect('dashboard/rombel')->with('pesan', 'Data Berhasil');
-    }
-}
+};

@@ -1,6 +1,6 @@
 @use(App\Models\User)
 <!-- Left Sidebar Start -->
-<div class="app-sidebar-menu">
+<div class="app-sidebar-menu" style="background-color: #90CBC1; height: 100%; color: #ffffff;">
     <div class="h-100" data-simplebar>
         
 
@@ -34,7 +34,7 @@
                 <li>
                     <a href="/dashboard" class="nav-link">
                         <i class="fa-solid fa-gauge" style="color: #c81498;"></i>
-                        <span> Dashboard </span>
+                        <span> Konsultasi </span>
                     </a>
                 </li>
                 
@@ -44,24 +44,23 @@
                         <li>
                             <a href="/dashboard/prodi" class="nav-link">
                                 <i class="fa-solid fa-user" style="color: #c81498;"></i>
-                                <span> Profile </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/dashboard/dosen" class="nav-link">
-                                <i class="fa-solid fa-calendar-days" style="color: #c81498;"></i>
-                                <span> Daftar Tenaga Medis
-                                </span>
+                                <span> Pencatatan Kesehatan </span>
                             </a>
                         </li>
                         <li>
                             <a href="/dashboard/mahasiswa" class="nav-link">
-                                <i class="fa-solid fa-clipboard" style="color: #c81498;"></i>
-                                <span> Daftar 
-                                    Pengguna </span>
+                                <i class="fa-solid fa-calendar-days" style="color: #c81498;"></i>
+                                <span> Komunitas
+                                </span>
                             </a>
                         </li>
                         <li>
+                            <a href="{{ route('datapengguna.index') }}" class="nav-link">
+                                <i class="fa-solid fa-clipboard" style="color: #c81498;"></i>
+                                <span> Daftar Pengguna </span>
+                            </a>
+                        </li>
+                        
                                 <a href="{{ route('logout') }}" class="nav-link"
                                 onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                 <i class="fa-solid fa-right-from-bracket" style="color: #c81498;"></i>
@@ -84,13 +83,13 @@
                     <li>
                         <a href="/dashboard/prodi" class="nav-link">
                             <i class="fa-solid fa-user" style="color: #c81498;"></i>
-                            <span> Profile </span>
+                            <span> Pencatatan Kesehatan </span>
                         </a>
                     </li>
                     <li>
                         <a href="/dashboard/dosen" class="nav-link">
                             <i class="fa-solid fa-calendar-days" style="color: #c81498;"></i>
-                            <span> Pencatan Kesehatan
+                            <span> Pencatatan Kesehatan
                             </span>
                         </a>
                     </li>
@@ -115,15 +114,15 @@
                         <!--Mahasiswa = Tenaga Medis -->
                     @elseif (Auth::user()->role == User::ROLE_MAHASISWA)
                     <li>
-                        <a href="/dashboard/prodi" class="nav-link">
+                        <a href="/dashboard/kesehatan" class="nav-link">
                             <i class="fa-solid fa-user" style="color: #c81498;"></i>
-                            <span> Profile </span>
+                            <span> Pencatatan Kesehatan </span>
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard/dosen" class="nav-link">
+                        <a href="/dashboard/mahasiswa" class="nav-link">
                             <i class="fa-solid fa-calendar-days" style="color: #c81498;"></i>
-                            <span> Daftar Pasien
+                            <span> Komunitas
                             </span>
                         </a>
                     </li>
